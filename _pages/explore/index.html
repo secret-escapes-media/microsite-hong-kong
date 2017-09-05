@@ -1,0 +1,107 @@
+---
+
+layout: basic
+title: Explore
+class: explore
+nav-order: 2
+
+banner-title: Explore
+banner-subtitle: Hong Kong
+
+intro: >
+  <p class="p--lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. </p>
+
+
+
+sections:
+
+  - title: Crete
+    class: crete
+    hierarchy: 1
+    content: >
+      <p>The Cretan landscape is framed by wild and rugged peaks to the south, a patchwork of mountain villages, ancient harbour towns containing a hive of activity, and stunning coastlines of soft sands lapped by emerald waters. A land so diverse among the Mediterranean, Crete is a standalone outpost  of unique culture expressed in its food and drink, and a fervent identity shadowed by a history and heritage that imbues pride amongst the people of the island. A big island with a bigger heart, you’ll find treasures like the sublime Samaria Gorge and a range of tavernas supplied by local produce, meaning epic scenery and addictive dining. From bustling cities to laid-back coastal towns, Crete caters to a wide range of tastes, always offering its unique style and taste to the delight of travellers.</p>
+
+  - title: Rhodes
+    class: rhodes
+    hierarchy: 1
+    content: >
+      <p>The largest of the Dodecanese, Rhodes marries a rich history with buzzing towns, resplendent coastline, isolated wooded forests and simple Greek charms from top to bottom. Whether you’re going for endless sun lounging on crisp, white sands, or you prefer exploring Byzantine cities and imposing Knights’ fortresses, Rhodes is an inspired destination that caters to many tastes. Labyrinthine old towns lead to quiet rural villages, where rich food and drink abound in the family tavernas and locals put the world to rights in buzzing bars. Generations of different cultures have mixed in this strategic location, with Turkish, Jewish and Greek melding to carve out a unique identity in the Dodecanese. Discover this cultural menagerie in the architecture, delicacies and flavours of the island.</p>
+
+  - title: Kos
+    subtitle: An island of two halves
+    class: kos
+    hierarchy: 2
+    content: >
+      <p>This second largest of the Dodecanese is a fiery mix of ancient history, stunning beaches, buzzing nightlife and effortless relaxation. A landscape of two extremes, the majority of the island is flat, making it perfect for long cycle rides exploring quiet villages. The south rises dramatically, offering beaches with grand mountainous backdrops and secluded mountain villages with great local delicacies. Kos Town, like the rest of the island, is littered with ancient finds. Corinthian columns rise out of the urban scene, rubbing shoulders with Roman mosaics and Venetian Knights’ castles. Italianate buildings and public gardens are pierced my minarets, adding to the heady concoction of culture on display. Kos caters to many tastes – enjoy the nightlife of Kos Town or find your own quiet island retreat on the rest of the land.</p>
+
+  - title: Symi
+    class: symi
+    hierarchy: 3
+    content: >
+      <p>Those that arrive to Symi by ferry will be in awe of the beauty of the waterfront buildings. A colourful menagerie of Italianate mansions of burnt orange and sandy hues create a dazzling display of beauty to any visitor that arrives by sea. The rest of the island is pretty barren, but gorgeous beaches are to be found everywhere. A truly beautiful destination that should be more than just a day trip from Rhodes.</p>
+
+  - title: Nisyros
+    class: nisyros
+    hierarchy: 3
+    content: >
+      <p>An island of wild beauty, Nisyros offers a volcanic landscape and remote island charms. Literally the tip of a volcano, this small outcrop matches dramatic natural features like the grand caldera with a wash of charming white buildings hiding tavernas and bars. For secluded beauty, epic hikes and peaceful harbour life, stop by.</p>
+
+  - title: Kalymnos
+    class: kalymnos
+    hierarchy: 3
+    content: >
+      <p>Kos’s neighbour is a mountainous treasure that offers quiet, relaxed Greek rural scenes that draws outdoor enthusiasts and those looking for true peace on holiday. The working hub of Pothia isn’t particularly touristy, yet the island’s true delights lie in the quiet villages to the south. For private beaches, quiet towns and local delicacies like squid in ouzo, Kalymnos makes a great stop.</p>
+
+
+---
+
+
+
+{% assign sections = page.sections | sort: 'hierarchy' %}
+{% for section in sections %}
+  {% assign section-highlights = highlights | where: 'guide-section', section.class %}
+  {% if section.hierarchy == 1 %}
+    {% include guide-sections/large.html %}
+  {% elsif section.hierarchy == 2 %}
+    {% include guide-sections/medium.html %}
+  {% endif %}
+{% endfor %}
+
+{% assign small-sections = page.sections | where: 'hierarchy','3' %}
+{% if small-sections.size > 0 %}
+<section class="section--padding-large">
+
+  <div class="row row--padding">
+    {% for section in small-sections %}
+      {% include guide-sections/small.html %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+
+
+
+<section class="bg--light-grey">
+
+  <div class="row row--padding align-center">
+    <h2 class="title title--medium title--upper title--expanded title--color title--serif title--lined">Offers</h2>
+  </div>
+
+  <div class="row row--padding row--margin-none">
+    {% assign offers = site.data.offers | sort: 'saved' | reverse %}
+    {% for offer in offers limit:3 %}
+      {% include offers/small.html %}
+    {% endfor %}
+  </div>
+
+  <div class="row row--padding align-center">
+    <a href="{{ site.baseurl }}/offers" class="btn btn--large">View all offers</a>
+  </div>
+
+</section>
+
+
+
+
+{% include highlights/modal.html %}

@@ -1,0 +1,64 @@
+---
+
+layout: basic
+title: Overview
+class: overview
+nav-order: 1
+
+banner-supertitle: Discover
+banner-title: Hong Kong
+
+
+
+intro: >
+  <p class="p--lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+
+
+sections:
+
+  - title: A Foodie Nirvana
+    class: food-and-drink
+    content: >
+      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+
+  - title: Culturally Diverse
+    class: art-and-culture
+    content: >
+      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+
+  - title: Shop ‘til you Drop
+    class: shopping
+    content: >
+      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+
+---
+
+
+
+
+<section class="section--padding-large">
+  <div class="row row--padding">
+
+    {% for section in page.sections %}
+    <div class="bob" id="section-{{section.class}}">
+      <a href="{{ site.baseurl }}/{{ section.link }}" class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2 bg-image--border-radius bg-image--shadow" style="background-image:url('{{ site.baseurl }}/img/content/overview/{{ section.class }}.jpg');"></a>
+      <div class="bob__text">
+        <h2 class="title title--small title--upper title--expanded">{{ section.title }}</h2>
+        {{ section.content }}
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+
+
+<section class="section--padding-large bg--partner-primary invert-text align-center">
+  <div class="row row--padding">
+    <h2 class="title title--large title--upper title--expanded title--light title--serif">Get exploring</h2>
+    <a href="{{ site.baseurl }}/explore" class="btn btn--invert btn--large">Start now</a>
+  </div>
+</section>
+

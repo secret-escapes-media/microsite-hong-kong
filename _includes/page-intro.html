@@ -1,0 +1,26 @@
+
+<div class="intro {% if page.sections %}has-nav{% endif %}">
+
+
+  <section class="intro__content intro--{{ page.class }}">
+    <div class="row row--padding align-center">
+      {{ page.intro }}
+    </div>
+  </section>
+
+
+  {% if page.sections %}
+  <section class="intro__nav section--padding-none align-center site-nav">
+    <div class="row row--padding">
+    <ul class="site-nav__list">
+      {% for section in page.sections %}
+      <li class="site-nav__item"><a href="#section-{{ section.class }}" class="site-nav__link">{{ section.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  </section>
+  {% endif %}
+
+
+</div>
+

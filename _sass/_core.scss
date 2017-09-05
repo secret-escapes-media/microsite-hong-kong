@@ -1,0 +1,200 @@
+// global variables & useful tools
+
+
+// -------- colors --------
+
+$white:       #fff;
+$black:       #0d0d0d;
+$light-grey:  #f2f2f2;
+$grey:        #a2a2a2;
+$dark-grey:   #1a1a1a;
+
+$white-15:    rgba(255,255,255,.15);
+$white-25:    rgba(255,255,255,.25);
+$white-33:    rgba(255,255,255,.33);
+$white-5:     rgba(255,255,255,.5);
+$white-66:    rgba(255,255,255,.66);
+$white-75:    rgba(255,255,255,.75);
+$white-85:    rgba(255,255,255,.85);
+$black-15:    rgba(0,0,0,.15);
+$black-25:    rgba(0,0,0,.25);
+$black-33:    rgba(0,0,0,.33);
+$black-5:     rgba(0,0,0,.5);
+$black-66:    rgba(0,0,0,.66);
+$black-75:    rgba(0,0,0,.75);
+$black-85:    rgba(0,0,0,.85);
+
+$se-orange:       #ff8c00;
+$se-orange-20:    rgba(255,140,0,.20);
+$se-orange-66:    rgba(255,140,0,.66);
+$se-orange-85:    rgba(255,140,0,.85);
+$se-light-grey:   #dadada;
+$se-dark-grey:    #292728;
+$se-dark-grey-33: rgba(41,39,40,.33);
+$se-dark-grey-5:  rgba(41,39,40,.5);
+$se-dark-grey-66: rgba(41,39,40,.66);
+$se-dark-grey-85: rgba(41,39,40,.85);
+
+$partner-primary:   #612426;
+$partner-secondary: #926e6f;
+$partner-tertiary: #dcb538;
+
+$text-black:      #2f2f2f;
+$text-heading:    #2f2f2f;
+$text-paragraph:  #7a7a7a;
+
+
+// -------- breakpoints --------
+
+$xxxxlarge:  1200px;
+$xxxlarge:  1080px;
+$xxlarge:   970px;
+$xlarge:    850px;
+$large:     650px;
+$medium:    450px;
+$small:     300px;
+
+@mixin bp($width){
+  @if $width == xxxlarge {
+    @media (min-width:$xxxlarge) {@content;}
+  }
+  @if $width == xxlarge {
+    @media (min-width:$xxlarge) {@content;}
+  }
+  @if $width == xlarge {
+    @media (min-width:$xlarge) {@content;}
+  }
+  @if $width == large {
+    @media (min-width:$large) {@content;}
+  }
+  @if $width == medium {
+    @media (min-width:$medium) {@content;}
+  }
+  @if $width == small {
+    @media (min-width:$small) {@content;}
+  }
+}
+
+@mixin max-bp($width){
+  @if $width == xxxlarge {
+    @media (max-width:$xxxlarge) {@content;}
+  }
+  @if $width == xxlarge {
+    @media (max-width:$xxlarge) {@content;}
+  }
+  @if $width == xlarge {
+    @media (max-width:$xlarge) {@content;}
+  }
+  @if $width == large {
+    @media (max-width:$large) {@content;}
+  }
+  @if $width == medium {
+    @media (max-width:$medium) {@content;}
+  }
+  @if $width == small {
+    @media (max-width:$small) {@content;}
+  }
+}
+
+// vertical breakpoint for small screen mobile
+@mixin bp-vertical {
+  @media (max-height:$medium) and (max-width:$large) { @content; }
+}
+
+
+// -------- global box-sizing & font smoothing --------
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+// -------- responsive images --------
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.js-svg-swap {
+  max-width: 100%;
+  width: 100%;
+}
+
+
+// -------- text link style --------
+
+a {
+  color: inherit;
+  text-decoration:none;
+  &:hover { text-decoration: underline; }
+}
+
+
+// -------- enable 100% height --------
+
+body, html { height: 100%; }
+
+
+// -------- general transition --------
+
+$transition-time: .25s;
+@mixin transition() { transition: all $transition-time ease; }
+
+
+// -------- clearfix --------
+
+@mixin clearfix() {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+
+// -------- accessible hiding --------
+
+.hidden {
+  position: absolute;
+  left: -9999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+// -------- z-index values --------
+
+$z-overlay-upper:   25;
+$z-overlay:         20;
+$z-nav-upper:       15;
+$z-nav:             10;
+$z-content-upper:   5;
+$z-content:         0;
+$z-background:      -1;
+
+
+// -------- generic styles --------
+
+// standard bg position, repeat, etc
+@mixin background-attributes {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}

@@ -1,0 +1,33 @@
+<section class="guide-section guide-section--large section--padding-large {% cycle '', 'bg--light-grey' %}" id="section-{{ section.class }}">
+
+  <div class="row row--padding">
+    <div class="bob">
+
+      <div class="bob__image bg-image bg-image--border-radius bg-image--ratio bg-image--ratio-4-3" style="background-image:url('{{ site.baseurl }}/img/content/explore/{{ section.class }}.jpg');"></div>
+
+      <div class="bob__text">
+        <h2 class="title title--medium title--upper title--expanded">{{ section.title }}</h2>
+        {% if section.subtitle %}
+          <span class="title title--micro title--upper title--expanded title--serif title--lined">{{ section.subtitle }}</span>
+        {% endif %}
+        {{ section.content }}
+      </div>
+
+    </div>
+  </div>
+
+
+
+  {% if section-highlights.size > 0 %}
+  <div class="row row--padding {% if section-highlights.size > 4 %}row--columns-4-4-4-gutters{% else %}row--columns-3-3-3-3-gutters{% endif %}" id="#hl-{{ section.class }}">
+
+    {% for highlight in section-highlights %}
+
+      {% include highlights/normal.html %}
+
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+</section>

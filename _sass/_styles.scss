@@ -1,0 +1,185 @@
+
+/* ===============================================
+ *     CUSTOM STYLES FOR THE SITE
+ * =============================================== */
+
+body { background-color: $white; }
+
+// -- Section styles --
+.invert-text {
+  color: $white;
+  &.title, & .title { color: $white; }
+  hr,.hr { background-color: rgba($white,0.4);}
+}
+
+.bg {
+  &--white      { background-color: $white; }
+  &--black      { background-color: $black; }
+  &--light-grey { background-color: $light-grey; }
+  &--grey { background-color: $grey; }
+  &--dark-grey  { background-color: $dark-grey; }
+  &--text-black     { background-color: $text-black; }
+  &--text-heading   { background-color: $text-heading; }
+  &--text-paragraph { background-color: $text-paragraph; }
+  &--se-orange     { background-color: $se-orange; }
+  &--se-light-grey { background-color: $se-light-grey; }
+  &--se-dark-grey  { background-color: $se-dark-grey; }
+  &--partner-primary   { background-color: $partner-primary; }
+  &--partner-secondary { background-color: $partner-secondary; }
+}
+
+// -- Page intro sections --
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  &__content {}
+  &.has-nav &__content {
+    margin-bottom: 50px;
+    background-color: $partner-secondary;
+    color: $white;
+    & .title { color: $white; }
+  }
+
+  $pagenav-height: 50px;
+  &__nav {
+    height: $pagenav-height;
+    line-height: $pagenav-height;
+    background-color: rgba($partner-secondary,0.8);
+    border-top: 0;
+    border-bottom: 0;
+    color: #fff;
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    ul {
+      height: $pagenav-height;
+      li {
+        border-left: .5px solid rgba($white,0.1);
+        border-color: rgba($white,0.1) !important;
+
+        &.is-current {
+          color: $white;
+          background-color: $partner-secondary;
+        }
+        &:hover {
+          background-color: $partner-secondary;
+        }
+      }
+    }
+
+    &.stuck {
+      position: fixed; top: 0; bottom: auto;
+      z-index: $z-nav-upper;
+      box-shadow: 0 0 5px 0 rgba($black, 0.2);
+    }
+  }
+
+}
+
+/* ===============================================
+ *     JAVASCRIPT SECTIONS
+ * =============================================== */
+
+.accordion {
+  @include clearfix();
+  &__trigger {}
+  &--open {}
+  &--closed {}
+}
+
+.js-bg-fade {
+  position: relative;
+  & * { z-index: 1; }
+  &__overlay {
+    position: absolute;
+    top:0; left:0; bottom:0; right:0;
+    background-color: rgba($dark-grey,0.7);
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+
+/* ===============================================
+ *     EXPLORE PAGE
+ * =============================================== */
+
+.guides {
+
+  &-row { overflow: hidden; margin-bottom: -$margin; }
+
+  &__item {
+    &-content {
+      padding: 2em;
+      margin-top: 0 !important;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    margin-bottom: $margin;
+    @include bp(xxlarge){
+      @include gallery($gutters 6);
+    }
+  }
+
+  &__item--small {
+    overflow: hidden;
+    margin-bottom: $margin;
+    @include bp(xxlarge){
+      @include gallery($gutters 4);
+    }
+  }
+
+  &__item--large {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: $margin;
+    @include bp(large){
+      .flexbox & {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+/* ===============================================
+ *     GUIDE PAGE
+ * =============================================== */
+
+.guide-section {
+  position: relative;
+
+  &--large {}
+  &--medium {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.highlights {
+  &--day-guide {
+
+    @include bp(xlarge){
+      padding-top: 2em;
+      & .highlight {
+        margin-top: -2em;
+        &:nth-child(3n+2) { margin-top: 0; }
+      }
+    }
+
+  }
+}
+
+.highlight {
+  .card__content {
+    border-top: 1px solid $light-grey;
+    display: none;
+    @include bp(large){ display: block; }
+  }
+}
+

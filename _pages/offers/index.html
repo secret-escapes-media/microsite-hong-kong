@@ -1,0 +1,29 @@
+---
+
+layout: basic
+title: Offers
+class: offers
+nav-order: 4
+
+banner-supertitle: The best
+banner-title: Hong Kong offers
+
+intro: >
+  <p class="p--lead">Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+---
+
+
+
+<section class="section bg--light-grey">
+  <div class="row row--padding">
+    {% assign offers = site.data.offers | sort: 'saved' | reverse %}
+    {% for offer in offers %}
+      {% include offers/normal.html %}
+    {% endfor %}
+  </div>
+</section>
+
+
+
+{% include offers/banner.html %}

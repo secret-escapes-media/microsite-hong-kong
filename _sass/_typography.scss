@@ -1,0 +1,278 @@
+
+/* ===============================================
+ *     GENERAL TYPOGRAPHIC STYLES
+ * =============================================== */
+
+// -------- root typography styles --------
+
+$core-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$title-font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+
+
+html { font-size: 62.5%; }
+body,
+input, textarea, keygen, select, button {
+  font: 400 14px/1.728 $main-font-family;
+  -webkit-text-size-adjust: 100%;
+  @include bp(medium) {
+    font-size: 15px;
+  }
+  color: $text-paragraph;
+}
+
+
+/* ===============================================
+ *     HEADINGS
+ * =============================================== */
+
+.title {
+  color: $text-heading;
+  letter-spacing: .025em;
+  line-height: 1.2;
+  font-family: $title-font-family;
+  + * { margin-top: 0.75em; }
+
+  &--spacing {
+    * + & { margin-top: 15px; }
+  }
+  &--margin {
+    margin-top: 1.5em;
+    &-small + * { margin-top: 0.5; }
+    &-none { margin-top: 0; }
+    &-none + * { margin-top: 0; }
+  }
+
+  &--super-heading { margin-top: 0 !important; }
+  &--sub-heading { margin-top: 0 !important; }
+
+  &--light     { font-weight: 300; }
+  &--bold      { font-weight: 500; }
+  &--bolder    { font-weight: 600; }
+  &--expanded  { letter-spacing: .2em; }
+  &--condense  { letter-spacing: 0; }
+  &--tight     { line-height: .9; }
+  &--tighter   { line-height: .8; }
+  &--upper     { text-transform: uppercase; }
+  &--italic    { font-style: italic; }
+
+  &--largest {
+    font-size: 4.3em;
+    line-height: 1;
+  }
+  &--larger      { font-size: 2.5em; line-height: 1; }
+  &--large       { font-size: 2.25em; line-height: 1; }
+  &--medium      { font-size: 2em; }
+  &--small       { font-size: 2em; }
+  &--smaller     { font-size: 1.75em; }
+  &--smallest    { font-size: 1.5em; }
+  &--tiny        { font-size: 1.44em; }
+  &--micro       { font-size: 1.2em; }
+  @include bp(large){
+    &--light     { font-weight: 200; }
+
+    &--largest     { font-size: 6em; }
+    &--larger      { font-size: 4.8em; }
+    &--large       { font-size: 3.4em; }
+    &--medium      { font-size: 2.533em; }
+    &--small       { font-size: 2.367em; }
+    &--smaller     { font-size: 2em; }
+    &--smallest     { font-size: 1.75em; }
+  }
+  @include bp(xxlarge){
+    &--largest     { font-size: 8em; }
+    &--larger      { font-size: 6em; }
+    &--large       { font-size: 4em; }
+    &--medium      { font-size: 2.833em; }
+    &--small       { font-size: 2.367em; }
+    &--smaller     { font-size: 2em; }
+    &--smallest     { font-size: 1.75em; }
+  }
+
+  // STYLISTIC
+  &--color { color: $partner-primary; }
+
+  &--lined {
+    display: inline-block;
+    position: relative;
+    &:before, &:after {
+      content: "";
+      width: 100px; height: 4px;
+      margin: 0 1em;
+      position: absolute;
+      top: 50%; margin-top: -2px;
+      border-top: 1px solid rgba($black,0.1);
+      border-bottom: 1px solid rgba($black,0.1);
+      .invert-text & {
+        border-top: 1px solid rgba($white,0.5);
+        border-bottom: 1px solid rgba($white,0.5);
+      }
+    }
+    &:before { right: 100%; }
+    &:after { left: 100%; }
+  }
+
+}
+
+
+/* ===============================================
+ *     PARAGRAPH
+ * =============================================== */
+
+.p {
+  &--lead { }
+  &--large { font-size: 1.05em; }
+  &--small { font-size: .85em; }
+
+  &--light     { font-weight: 300; }
+  &--bold      { font-weight: 600; }
+  &--bolder    { font-weight: 700; }
+  &--condense  { letter-spacing: 0; }
+  &--expanded  { letter-spacing: .1em; }
+  &--tight     { line-height: .9; }
+  &--tighter   { line-height: .8; }
+  &--upper     { text-transform: uppercase; }
+  &--italic    { font-style: italic; }
+  @include bp(large){
+    &--lead {
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+  }
+}
+.align-center p,
+p.align-center { margin-left: auto; margin-right: auto; }
+
+
+
+// -------- Lists ---------
+
+dl {
+  dt { margin-bottom: 5px; }
+  dd {}
+}
+
+.list {
+  &--horizontal {
+    list-style: none; padding: 0; margin: 0;
+    overflow-x: auto; white-space: nowrap;
+    li {
+      display: inline-block; position: relative; padding: 0 1.5em; height: 100%;
+    }
+    li:after,
+    li:first-child:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: rgba($black,0.1);
+      transform: translateY(-50%);
+    }
+    li:first-child:before {
+      right: auto; left: 0;
+    }
+
+    @include bp(large){
+      .flexbox & {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        li {
+          flex-grow: 1; display: flex; align-items: center;
+          a { width: 100%; display: inline-block; }
+        }
+      }
+    }
+
+  }
+  &--lined {
+    li {
+      list-style: none;
+      padding: 10px 0;
+      border-top: 1px solid rgba($black,0.1);
+      .invert-text & { border-top: 1px solid rgba($white,0.1); }
+    }
+  }
+}
+
+
+/* ===============================================
+ *     GENERAL CONTENT STYLES
+ * =============================================== */
+
+p             { max-width: $xlarge; }
+p + *         { margin-top: 1em; }
+li            { list-style-position: inside; }
+ul li         { list-style-type: disc; }
+ol li         { list-style-type: decimal; }
+em            { font-style: italic; }
+strong        { font-weight: 800; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.align-center { text-align: center; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: darken($light-grey, 10);
+  margin: 1em 0;
+}
+.hr {
+  &--center { width: 80px; margin-left: auto; margin-right: auto; }
+  &--margin { margin-top: 2em; margin-bottom: 2em; }
+}
+
+a {
+  &:hover { text-decoration: none; }
+  p &:hover { text-decoration: underline; }
+}
+
+
+
+// ---------- Buttons ----------
+
+.btn {
+  @include transition;
+  display:inline-block;
+  padding: .5em 3em .45em;
+  border-radius: 3px;
+  background-color: $partner-primary;
+  color: $white;
+  font-family: $main-font-family;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  &:hover {
+    background-color: darken($partner-primary,0.2);
+    text-decoration: none;
+  }
+  * + & { margin-top: 1.5em; }
+
+  &--invert {
+    background-color: rgba($white,0.8); color: $partner-primary;
+    &:hover { background-color: $white; color: $partner-primary; }
+  }
+
+  &--se {
+    background-color: $se-orange;
+    &:hover { background-color: darken($se-orange, 10); }
+    &.btn--invert { color: $se-orange; background-color: $white; }
+  }
+
+  &--small { font-size: 0.85em; padding: .4em 2em; }
+  @include bp(large){
+    &--large { font-size: 1em; padding: .7em 3em; }
+  }
+
+  &--subtle {
+    background-color: $light-grey; color: $dark-grey;
+    &:hover { background-color: darken($light-grey, 10); }
+  }
+
+}

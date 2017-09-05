@@ -1,0 +1,32 @@
+---
+layout: guide
+---
+{% assign highlights = site.data.highlights | where:"guide",page.class %}
+
+
+
+{% assign sections = page.sections | sort: 'hierarchy' %}
+{% for section in sections %}
+  {% assign section-highlights = highlights | where: 'guide-section', section.class %}
+  {% if section.hierarchy == 1 %}
+    {% include guides/sections/large.html %}
+  {% elsif section.hierarchy == 2 %}
+    {% include guides/sections/medium.html %}
+  {% endif %}
+{% endfor %}
+
+{% assign small-sections = page.sections | where: 'hierarchy','3' %}
+{% if small-sections.size > 0 %}
+<section class="section--padding-large">
+
+  <div class="row row--padding">
+    {% for section in small-sections %}
+      {% include guides/sections/small.html %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+
+
+{% include highlights/modal.html %}

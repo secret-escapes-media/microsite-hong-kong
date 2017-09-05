@@ -1,0 +1,252 @@
+// layouts for all sections, using susy grid plugin
+
+
+// -------- general --------
+
+$susy:(
+  columns: 12,
+  container: 100%,
+  global-box-sizing: border-box,
+  gutters: 0,
+);
+$gutters:( gutters: 1 / 2, );
+$margin: 2em;
+
+
+// -------- grid sections --------
+
+section,.section {
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 2.25em;
+  padding-bottom: 2.25em;
+  @include bp(large) {
+    padding-top: 3.375em;
+    padding-bottom: 3.375em;
+  }
+}
+.section--padding {
+  padding-top: 3.375em; padding-bottom: 3.375em;
+  &-none { padding-top: 0; padding-bottom: 0; }
+  &-xxlarge, &-xlarge, &-large {
+    padding-top: 4.2em; padding-bottom: 4.2em;
+  }
+
+  @include bp(large) {
+    &-xxlarge { padding-top: 8em; padding-bottom: 8em; }
+    &-xlarge { padding-top: 5.2em; padding-bottom: 5.2em; }
+    &-large { padding-top: 4.2em; padding-bottom: 4.2em; }
+    &-small { padding-top: 1.6em; padding-bottom: 1.6em; }
+  }
+}
+
+.row {
+  @include container( $xxxxlarge );
+  position: relative;
+  & + .row { margin-top: $margin; }
+  &--thinner {
+    position: relative;
+    @include container( $xxlarge );
+  }
+  &--thin { @include container( $xxxlarge ); }
+  &--xthin { @include container( $xxlarge ); }
+  &--xxthin { @include container( $xlarge ); }
+  &--xxxthin { @include container( $large ); }
+}
+
+.row--padding {
+  padding-left: ( $margin / 2 );
+  padding-right: ( $margin / 2 );
+  @include bp(medium) {
+    padding-left: $margin;
+    padding-right: $margin;
+  }
+}
+.row--margin {
+  margin-left: ( $margin / 2 );
+  margin-right: ( $margin / 2 );
+  @include bp(medium) {
+    margin-left: $margin;
+    margin-right: $margin;
+  }
+  &-none {
+    margin: 0 auto;
+    & + .row { margin-top: 0; }
+  }
+}
+
+.row__column + .row__column {
+  margin-top: ( $margin / 2 );
+  @include bp(large) {
+    margin-top: 0;
+  }
+}
+
+
+// -------- two col grid mixin --------
+// creates two columns in 12 column grid with optional gutters
+// column number scheme e.g.  6-6 = 50% 50%    4-8 = 33% x 66%
+@mixin two-column-grid( $col1, $col2, $has-gutters: null ) {
+  .row__column {
+    @if $has-gutters {
+      @include span( $gutters $col1 );
+    } @else {
+      @include span( $col1 );
+    }
+  }
+  .row__column:nth-child( even ) {
+    @if $has-gutters {
+      @include span( $gutters last $col2 );
+    } @else {
+       @include span( last $col2 );
+    }
+  }
+}
+
+
+// -------- grid columns --------
+
+// breakpoint for all columns
+@include bp(large){
+
+  // two columns without gutter
+  .row--columns-3-9 { @include two-column-grid( 3, 9 ); }
+  .row--columns-4-8 { @include two-column-grid( 4, 8 ); }
+  .row--columns-5-7 { @include two-column-grid( 5, 7 ); }
+  .row--columns-6-6 { @include two-column-grid( 6, 6 ); }
+  .row--columns-7-5 { @include two-column-grid( 7, 5 ); }
+  .row--columns-8-4 { @include two-column-grid( 8, 4 ); }
+  .row--columns-9-3 { @include two-column-grid( 9, 3 ); }
+
+  // two columns with gutter
+  .row--columns-3-9-gutters { @include two-column-grid( 3, 9, gutters ); }
+  .row--columns-4-8-gutters { @include two-column-grid( 4, 8, gutters ); }
+  .row--columns-5-7-gutters { @include two-column-grid( 5, 7, gutters ); }
+  .row--columns-6-6-gutters { @include two-column-grid( 6, 6, gutters ); }
+  .row--columns-7-5-gutters { @include two-column-grid( 7, 5, gutters ); }
+  .row--columns-8-4-gutters { @include two-column-grid( 8, 4, gutters ); }
+  .row--columns-9-3-gutters { @include two-column-grid( 9, 3, gutters ); }
+
+  // three columns without gutter
+  .row--columns-4-4-4 .row__column { @include gallery(4); }
+
+  // three columns with gutter
+  .row--columns-4-4-4-gutters .row__column {
+    @include gallery($gutters 4);
+    margin-bottom: gutter();
+  }
+
+  // three columns without gutter
+  .row--columns-3-3-3-3 .row__column { @include gallery(3); }
+
+  // three columns with gutter
+  .row--columns-3-3-3-3-gutters .row__column {
+    @include gallery($gutters 3);
+    margin-bottom: gutter();
+  }
+
+  // vertical align floated columns
+  .row--columns-vertical-align {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+
+.object {
+  &--1of2 { @include gallery(6); }
+  &--1of3 { @include gallery(4); }
+  &--1of4 { @include gallery(3); }
+  &--1of6 { @include gallery(2); }
+  &--1of12 { @include gallery(1); }
+  // with gutters
+  &--1of2-gutters { @include gallery($gutters 6); }
+  &--1of3-gutters { @include gallery($gutters 4); }
+  &--1of4-gutters { @include gallery($gutters 3); }
+  &--1of6-gutters { @include gallery($gutters 2); }
+  &--1of12-gutters { @include gallery($gutters 1); }
+}
+
+
+// Bob is a type of layout that we use frequently for featured content. We
+// couldn't think of an accurate and concise name so we called it Bob. Its
+// columns with a feature image and copy that swap columns in alternating order.
+// it needs a higher breakpoint than the rest of the grid amongst other things
+.bob {
+  @include container(100%);
+  @include layout(12 1/2);
+  text-align: center;
+  &__image {
+    max-width: $large;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+  }
+  &__text { z-index: 1; padding-top: $margin; }
+  & + & { margin-top: ($margin*2); }
+  @include bp(xxlarge){
+    text-align: left;
+    &__text { padding-top: $margin; }
+    // GRID STUFF
+    & + & { margin-top: gutter(6); }
+    .flexbox & {
+      display: flex;
+      align-items: center;
+    }
+    &__image { @include span(7); }
+    &__text {
+      @include span(5 last);
+      padding-top: 0;
+    }
+    &:nth-child(even){
+      .bob__image { @include span(7 last); }
+      .bob__text { @include span(5); }
+      .flexbox & {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+
+// Harvey is a 50/50 text image layout with no gutter. Use Harvey to make
+// an alternating full width section with centred text, and limited height
+// image sizing so the layout works across screens and sizes.
+.harvey {
+  @include container(100%);
+  @include layout(12 0);
+  &__image {
+  }
+  &__text {
+    padding: $margin;
+  }
+  & + & { margin: 0; padding: 0; }
+
+  @include bp(xlarge){
+    .flexbox & {
+      display: flex;
+      align-items: center;
+    }
+    &__image {
+      @include span(5);
+      min-height: 420px;
+    }
+    &__text {
+      @include span(7 last);
+      padding: $margin*2;
+    }
+    &:nth-child(odd){
+      .harvey__image { @include span(5 last); }
+      .harvey__text { @include span(7); }
+      .flexbox & {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+}

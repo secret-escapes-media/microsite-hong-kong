@@ -1,0 +1,59 @@
+// the title banner that appears at the top of every page. sometimes animated bgs
+
+
+.title-banner {
+  position: relative;
+  height: 75%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  @include background-attributes();
+
+  &__wrap {
+    position: absolute;
+    top: $core-nav-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content-upper;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: $z-content;
+    padding-top: 25vh;
+    padding-left: ($margin/2);
+    padding-right: ($margin/2);
+    .csstransforms.csstransforms3d & {
+      top: 50%;
+      padding-top: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    margin: 0.1em 0;
+    .overview & {
+      font-size: 3.2em;
+      @include bp(large){ font-size: 5.2em; }
+      @include bp(xlarge){ font-size: 7.2em; }
+    }
+  }
+
+  &__subtitle { margin-top: 0; }
+  &__supertitle,
+  &__subtitle {}
+
+  &__overlay {
+    content: "";
+    position: absolute;
+    z-index: $z-content;
+    top:0;bottom:0;left:0;right:0;
+    background-color: $dark-grey;
+    opacity: 0.15;
+  }
+
+}
