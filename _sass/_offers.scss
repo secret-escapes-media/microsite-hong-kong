@@ -100,12 +100,12 @@
       margin-right: .5em;
       margin-bottom: .2em;
       vertical-align: middle;
-      background-image: url( "../img/icons/map-pin.png" );
+      background-image: url( "../img/icons/map-pin-se.png" );
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
       background-size: contain;
-      .svg & { background-image: url( "../img/icons/map-pin.svg" ); }
+      .svg & { background-image: url( "../img/icons/map-pin-se.svg" ); }
     }
   }
   $circle-height: 50px;

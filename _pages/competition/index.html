@@ -4,12 +4,14 @@ layout: basic
 title: Competition
 class: competition
 nav-order: 6
+color: "#cc7148"
 
 banner-supertitle: Competition
 banner-title: Win a dream Hong Kong holiday
 
 intro: >
-  <p class="p--lead">From the western Ionians to the eastern Dodecanese, find your perfect Greek getaway below, with our handpicked selection of stunning hotels and luxurious packages</p>
+  <p class="p--lead">Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  <a href="#enter" class="btn btn--large">Enter now</a>
 
 ---
 
@@ -17,13 +19,39 @@ intro: >
 
 <section class="section bg--light-grey">
   <div class="row row--padding">
-    {% assign offers = site.data.offers | sort: 'saved' | reverse %}
-    {% for offer in offers %}
-      {% include offers/normal.html %}
-    {% endfor %}
+
+    <div class="bob">
+      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2 bg-image--rounded bg-image--shadow" style="background-image:url({{site.baseurl}}/img/content/competition/prize-1.jpg);"></div>
+      <div class="bob__text">
+        <h2 class="title title--smaller">Prize 1</h2>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
+      </div>
+    </div>
+
+    <div class="bob">
+      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2 bg-image--rounded bg-image--shadow" style="background-image:url({{site.baseurl}}/img/content/competition/prize-2.jpg);"></div>
+      <div class="bob__text">
+        <h2 class="title title--smaller">Prize 2</h2>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
+      </div>
+    </div>
+
+    <div class="bob">
+      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2 bg-image--rounded bg-image--shadow" style="background-image:url({{site.baseurl}}/img/content/competition/prize-3.jpg);"></div>
+      <div class="bob__text">
+        <h2 class="title title--smaller">Prize 3</h2>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
 
 
-{% include offers/banner.html %}
+
+<section class="section bg--white" id="enter">
+  <div class="row row--padding align-center">
+    <h2 class="title title--smaller">Enter now to be in to win!</h2>
+  </div>
+</section>

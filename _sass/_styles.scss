@@ -26,6 +26,8 @@ body { background-color: $white; }
   &--se-dark-grey  { background-color: $se-dark-grey; }
   &--partner-primary   { background-color: $partner-primary; }
   &--partner-secondary { background-color: $partner-secondary; }
+  &--partner-tertiary { background-color: $partner-tertiary; }
+  &--partner-black { background-color: $partner-black; }
 }
 
 // -- Page intro sections --
@@ -33,44 +35,35 @@ body { background-color: $white; }
   position: relative;
   overflow: hidden;
 
-  &__content {}
-  &.has-nav &__content {
-    margin-bottom: 50px;
-    background-color: $partner-secondary;
+  &__content {
+    background-color: $partner-black;
     color: $white;
     & .title { color: $white; }
   }
 
-  $pagenav-height: 50px;
-  &__nav {
-    height: $pagenav-height;
-    line-height: $pagenav-height;
-    background-color: rgba($partner-secondary,0.8);
-    border-top: 0;
-    border-bottom: 0;
-    color: #fff;
-    position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    ul {
-      height: $pagenav-height;
-      li {
-        border-left: .5px solid rgba($white,0.1);
-        border-color: rgba($white,0.1) !important;
-
-        &.is-current {
-          color: $white;
-          background-color: $partner-secondary;
-        }
-        &:hover {
-          background-color: $partner-secondary;
-        }
+  .page-links {
+    &__item {
+      @include transition();
+      display: inline-block;
+      white-space: nowrap;
+      color: #fff;
+      border-radius: 100px;
+      margin-top: 0.5em;
+      background-color: rgba($white,0.1);
+      &:hover {
+        background-color: rgba($white,0.2);
       }
     }
-
-    &.stuck {
-      position: fixed; top: 0; bottom: auto;
-      z-index: $z-nav-upper;
-      box-shadow: 0 0 5px 0 rgba($black, 0.2);
+    &__link {
+      display: inline-block;
+      padding: 0.35em 1.5em;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      @include bp(large){
+        padding: 0.4em 2em;
+        font-size: 0.85em;
+      }
     }
   }
 
@@ -104,82 +97,191 @@ body { background-color: $white; }
  *     EXPLORE PAGE
  * =============================================== */
 
-.guides {
+.guide-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
-  &-row { overflow: hidden; margin-bottom: -$margin; }
-
-  &__item {
-    &-content {
-      padding: 2em;
-      margin-top: 0 !important;
+  &__content {
+    box-shadow: 0 0 10px 1px rgba($partner-black,0.1);
+    &-text {
+      padding: 1em 2em 2em;
     }
   }
 
-  &__item {
-    overflow: hidden;
-    margin-bottom: $margin;
-    @include bp(xxlarge){
-      @include gallery($gutters 6);
+  // Invert every second large section to dark theme
+  &--invert &__title,
+  &--invert &__content {
+    color: white;
+    & .title { color: white; }
+    & .title--lined {
+      &:before, &:after {
+      border-top: 1px solid rgba($white,0.5);
+      border-bottom: 1px solid rgba($white,0.5);
+      }
     }
   }
-
-  &__item--small {
-    overflow: hidden;
-    margin-bottom: $margin;
-    @include bp(xxlarge){
-      @include gallery($gutters 4);
-    }
+  &--invert &__content,
+  &--invert .highlight {
+    background-color: $partner-black;
   }
 
-  &__item--large {
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: $margin;
-    @include bp(large){
+
+
+
+  &--small {
+    box-shadow: 0 0 10px 1px rgba($partner-black,0.1);
+    @include container(100%);
+    @include layout(12 0);
+    &__image {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 0;
+    }
+    &__text {
+      z-index: 1;
+      padding-top: $margin;
+      padding-bottom: $margin;
+    }
+    & + & { margin-top: ($margin*2); }
+
+    @include bp(xlarge){
+      text-align: left;
+      &__text {}
+      // GRID STUFF
       .flexbox & {
         display: flex;
         align-items: center;
       }
-    }
-  }
-}
-
-
-/* ===============================================
- *     GUIDE PAGE
- * =============================================== */
-
-.guide-section {
-  position: relative;
-
-  &--large {}
-  &--medium {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
-
-.highlights {
-  &--day-guide {
-
-    @include bp(xlarge){
-      padding-top: 2em;
-      & .highlight {
-        margin-top: -2em;
-        &:nth-child(3n+2) { margin-top: 0; }
+      &__image { @include span(5); }
+      &__text {
+        @include span(7 last);
+        padding-top: 0;
+      }
+      &:nth-child(even) &__image { @include span(5 last); }
+      &:nth-child(even) &__text { @include span(7); }
+      &:nth-child(even){
+        .flexbox & {
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+        }
       }
     }
+  }
 
+}
+
+
+
+.poi {
+  @include transition();
+  position: relative;
+  overflow: visible;
+  margin-bottom: 2em;
+  background-size: auto 100% !important;
+  box-shadow: 0 0 10px 1px rgba($partner-black,0.1);
+  &:hover {
+    background-size: auto 105% !important;
+    box-shadow: 0 2px 12px 1px rgba($partner-black,0.25);
+  }
+
+  &__title {
+    @include transition();
+    background-color: rgba($partner-primary,0.85);
+    position: absolute;
+    top: 1em;
+    left: -1em;
+    padding: 0.66em 1em;
+    & .title {
+      color: $white;
+    }
+  }
+  &:hover &__title { left: -0.5em; }
+
+  &__location {
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-family: $title-font-family;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 1.5em;
+      width: 1.05em;
+      margin-right: .5em;
+      margin-bottom: .2em;
+      vertical-align: middle;
+      background-image: url( "../img/icons/map-pin.png" );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-size: contain;
+      .svg & { background-image: url( "../img/icons/map-pin.svg" ); }
+    }
+  }
+  &__content {
+    @include transition();
+    color: $text-heading;
+    position: absolute;
+    white-space: normal;
+    bottom: 0;
+    padding: 6em 1.5em 1.5em;
+    background: -moz-linear-gradient(top, rgba($white,0) 0%, rgba($white,1) 60%);
+    background: -webkit-linear-gradient(top, rgba($white,0) 0%,rgba($white,1) 60%);
+    background: linear-gradient(to bottom, rgba($white,0) 0%,rgba($white,1) 60%);
+  }
+
+
+
+  &--top {
+    position: relative !important;
+    width: 30%;
+    margin: 2em 1.665%;
   }
 }
 
-.highlight {
-  .card__content {
-    border-top: 1px solid $light-grey;
-    display: none;
-    @include bp(large){ display: block; }
+
+
+
+.cycle-slideshow {
+  width: 100%;
+  position: relative;
+  padding: 2em 6em;
+   &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    width: 6em;
+  }
+  &:before {
+    left: 0;
+    background: -moz-linear-gradient(right, rgba($light-grey,0) 0%, rgba($light-grey,1) 100%);
+    background: -webkit-linear-gradient(right, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
+    background: linear-gradient(to left, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
+  }
+  &:after {
+    right: 0;
+    background: -moz-linear-gradient(left, rgba($light-grey,0) 0%, rgba($light-grey,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
+    background: linear-gradient(to right, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
   }
 }
-
+.cycle-carousel-wrap {
+  width: 100%;
+  z-index: 0;
+}
+.cycle-prev,
+.cycle-next {
+  & img { width: 20px; }
+}

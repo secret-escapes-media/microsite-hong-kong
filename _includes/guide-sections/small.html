@@ -1,13 +1,15 @@
-<div class="object--1of3-gutters" id="section-{{ section.class }}">
 
-  <div class="row bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--border bg-image--fade" style="background-image: url('{{site.baseurl}}/img/content/explore/{{section.class}}.jpg');">
-    <div class="bg-image__content invert-text">
-      <h2 class="title title--smaller title--upper title--expanded">{{ section.title }}</h2>
-    </div>
-  </div>
 
-  <div class="row">
-    {{ section.content }}
+<div class="row row--thin guide-section--small bg--white">
+
+  <div class="guide-section--small__image bg-image bg-image--ratio-16-9 bg-image--xlarge--ratio-3-4 bg-image--xxlarge--ratio-1-1" style="background-image:url({{site.baseurl}}/img/content/explore/{{ section.class }}.jpg);"></div>
+
+  <div class="guide-section--small__text row--padding">
+    <h2 class="title title--small title--display title--upper title--expanded title--bold">{{ section.title }}</h2>
+    {% if section.subtitle %}
+      <span class="title title--micro">{{ section.subtitle }}</span>
+    {% endif %}
+  {{ section.content }}
   </div>
 
 </div>

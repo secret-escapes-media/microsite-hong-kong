@@ -61,48 +61,52 @@
 
 
 ///////////////////////////////////////
-//    Generic modal
+//    POIs modal
 ///////////////////////////////////////
 
 var modal          = $('.js-modal'),
     modalLaunchBtn = $('.js-open-modal'),
-    modalCloseBtn  = $('.js-close-modal'),
-    modalCloseAreas  = $('.modal__content, .modal__wrap, .js-modal');
+    modalCloseBtn  = $('.js-close-modal');
 
-modalLaunchBtn.click(function(){
-
-  var targetModal = $(this).attr('data-modal');
-  var modalItem = $(this).attr('data-modal-item');
-
-  if(modalItem){
-    $('.modal__item').addClass('modal__item-inactive');
-    $('#modal__item-' + modalItem ).removeClass('modal__item-inactive');
-  }
-
+// opens modal with specific content
+function modalOpen(event){
+  event.preventDefault();
+  // hides all modal content
+  $('.modal__content').hide();
+  // show specific modal content from element data attribute
+  var modalContent   = $(event.currentTarget).data('modal-id'),
+      modalContentId = '.modal__content--' + modalContent;
+  $(modalContentId).show().addClass('is-open');
   // disable scrolling on background content (doesn't work iOS)
   $('body').addClass('disable-scroll');
-  // // open modal
-  $('#modal-' + targetModal).fadeIn('250', function(){
+  // open modal
+  modal.fadeIn('250', function(){
     $(this).removeClass('is-closed').addClass('is-open');
-    if(!modalItem){
-      $(this).find('.modal__item').removeClass('modal__item-inactive');
-    }
   });
+}
 
-  $('#modal-' + targetModal).find('.decoration').addClass('animate');
-
-});
-
-// closes modal
+// closes modal and hides all content
 function modalClose(event){
   event.preventDefault();
   // enable scrolling
   $('body').removeClass('disable-scroll');
+  // reset scroll position
+  // This is a bit hacky, but visually hides the scroll position resetting
+  setTimeout(function() {
+    $('.modal__content-wrap').scrollTop(0);
+  }, 280);
   // close modal with fade
   modal.fadeOut('250', function(){
     $(this).removeClass('is-open').addClass('is-closed');
+    // Remove status class from modal content
+    $('.modal__content.is-open').removeClass('is-open');
   });
 }
+
+// launches modal when offer is clicked
+modalLaunchBtn.on('click', function(event) {
+  modalOpen(event);
+});
 
 // closes modal on close icon click
 modalCloseBtn.on('click', function(event) {
@@ -110,7 +114,7 @@ modalCloseBtn.on('click', function(event) {
 });
 
 // closes modal on background click
-modalCloseAreas.on('click', function(event) {
+modal.on('click', function(event) {
   if (event.target !== this){
     return;
   }
@@ -125,70 +129,73 @@ $(document).keyup(function(event) {
 });
 
 
-// Launches modal from query string
-
-function GetQueryStringParams(sParam){
-  var sPageURL = window.location.search.substring(1);
-  var sURLVariables = sPageURL.split('&');
-  for (var i = 0; i < sURLVariables.length; i++){
-    var sParameterName = sURLVariables[i].split('=');
-    if (sParameterName[0] == sParam){
-      return sParameterName[1];
-    }
-  }
-}​
-
-var modalQuery = GetQueryStringParams('modal');
-
-if (modalQuery) {
-  var targetModal = modalQuery;
-  $('body').addClass('disable-scroll');
-  $('#modal-' + targetModal).fadeIn('250', function(){
-    $(this).removeClass('is-closed').addClass('is-open');
-  });
-}
-
-
 ///////////////////////////////////////
-//    Modal Carousel
+//    Modal Nav - next & previous
 ///////////////////////////////////////
 
-function modal_slider_next(){
-  var parent    = $('#modal__slider');
-  var current   = parent.find('.slide').not(".modal__item-inactive");
-  var next = current.next('.slide');
+function launchNextModal(){
+  var currentModal          = $('.modal__content.is-open'),
+      currentModalCategory  = currentModal.data('content-category'),
+      nextModal             = currentModal.next('.modal__content'),
+      nextModalCategory     = nextModal.data('content-category'),
+      firstModal            = $('.modal__content[data-content-category="'+ currentModalCategory +'"]:first'),
+      lastModal             = $('.modal__content[data-content-category="'+ currentModalCategory +'"]:last');
 
-  if( next.length == 0 ) {
-    var next = parent.find('.slide').first();
+  // hides the current modal
+  currentModal.hide().removeClass('is-open');
+  // reset scroll position
+  $('.modal__content-wrap').scrollTop(0);
+  if (nextModal && currentModalCategory === nextModalCategory ) {
+    // shows next in category
+    nextModal.show().addClass('is-open');
+  } else {
+    // isn't another modal in category so goes back to beginning
+    firstModal.show().addClass('is-open');
   }
-  current.addClass('modal__item-inactive');
-  next.removeClass('modal__item-inactive');
 }
 
-function modal_slider_previous(){
-  var parent    = $('#modal__slider');
-  var current   = parent.find('.slide').not(".modal__item-inactive");
-  var previous = current.prev('.slide');
-
-  if( previous.length == 0 ) {
-    var previous = parent.find('.slide').last();
+function launchPreviousModal(){
+  var currentModal          = $('.modal__content.is-open'),
+      currentModalCategory  = currentModal.data('content-category'),
+      previousModal         = currentModal.prev('.modal__content'),
+      previousModalCategory = previousModal.data('content-category'),
+      firstModal            = $('.modal__content[data-content-category="'+ currentModalCategory +'"]:first'),
+      lastModal             = $('.modal__content[data-content-category="'+ currentModalCategory +'"]:last');
+  // hides the current modal
+  currentModal.hide().removeClass('is-open');
+  // reset scroll position
+  $('.modal__content-wrap').scrollTop(0);
+  if (previousModal && currentModalCategory === previousModalCategory ) {
+    // shows next in category
+    previousModal.show().addClass('is-open');
+  } else {
+    // isn't another modal in category so goes back to beginning
+    lastModal.show().addClass('is-open');
   }
-  current.addClass('modal__item-inactive');
-  previous.removeClass('modal__item-inactive');
 }
 
+$('.js-modal-nav').on('click', function(event) {
+  event.preventDefault();
+  var navDirection = $(this).data('nav-direction');
 
-$('#modal_slider--next').click(function(){ modal_slider_next(); });
-$('#modal_slider--previous').click(function(){ modal_slider_previous(); });
-
-$(document).on('keyup', function(e) {
-  if(e.which === 37){
-    modal_slider_previous();
-  }else if(e.which === 39) {
-    modal_slider_next();
+  // checks which button has been clicked and runs function
+  switch (navDirection) {
+    case 'next':
+      launchNextModal();
+      break;
+    case 'previous':
+      launchPreviousModal();
+      break;
   }
 });
 
+$(document).on('keyup', function(e) {
+  if(e.which === 37){
+    launchPreviousModal();
+  }else if(e.which === 39) {
+    launchNextModal();
+  }
+});
 
 
 ///////////////////////////////////////

@@ -8,6 +8,7 @@
   &--ratio-3-4, &--ratio-1-1, &--ratio-4-3, &--ratio-3-2, &--ratio-16-9, &--ratio-21-9, &--ratio-5-2 {
     display: block;
     position: relative;
+    overflow: hidden;
     @include background-attributes();
     &:before {
       display: block;
@@ -138,8 +139,8 @@
 
 
   &--circle { border-radius: 9999999em; }
-  &--shadow { box-shadow: 0 0 10px 0 rgba($dark-grey,0.1); }
-  &--border-radius { border-radius: 5px; }
+  &--shadow { box-shadow: 0 0 10px 0 rgba($dark-grey,0.2); }
+  &--rounded { border-radius: 5px; }
   &--border {
     &:after {
       content: "";

@@ -4,19 +4,20 @@ layout: basic
 title: Offers
 class: offers
 nav-order: 4
+color: "#3d5e96"
 
-banner-supertitle: The best
-banner-title: Hong Kong offers
+banner-supertitle: The best Hong Kong
+banner-title: Offers
 
 intro: >
-  <p class="p--lead">Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+  <p class="p--lead">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
 ---
 
 
 
 <section class="section bg--light-grey">
-  <div class="row row--padding">
+  <div class="row row--padding offers--center">
     {% assign offers = site.data.offers | sort: 'saved' | reverse %}
     {% for offer in offers %}
       {% include offers/normal.html %}

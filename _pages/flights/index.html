@@ -4,26 +4,30 @@ layout: basic
 title: Flights
 class: flights
 nav-order: 5
+color: "#0E203F"
 
 banner-title: Flights
 banner-subtitle: with British Airways
 
 intro: >
-  <p class="p--lead">From the western Ionians to the eastern Dodecanese, find your perfect Greek getaway below, with our handpicked selection of stunning hotels and luxurious packages</p>
+  <h2 class="title title--smaller">Why fly BA?</h2>
+  <p class="p--lead">Fly with British Airways and enjoy award-winning service, excellent value for money and no hidden charges:</p>
 
 ---
 
 
 
 <section class="section bg--light-grey">
-  <div class="row row--padding">
-    {% assign offers = site.data.offers | sort: 'saved' | reverse %}
-    {% for offer in offers %}
-      {% include offers/normal.html %}
-    {% endfor %}
+  <div class="row row--padding align-center">
+    <ul>
+      <li>Free seat selection 24hrs in advance</li>
+      <li>Inclusive 23kg / 51lb checked baggage allowance</li>
+      <li>Airport, online or mobile check-in</li>
+      <li>Manage your travel plans with the British Airways app Except on Basic fares.</li>
+    </ul>
+    <a href="#" class="btn btn--large">Book now</a>
   </div>
 </section>
 
 
 
-{% include offers/banner.html %}

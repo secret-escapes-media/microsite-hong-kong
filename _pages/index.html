@@ -4,6 +4,7 @@ layout: basic
 title: Overview
 class: overview
 nav-order: 1
+color: "#e4003a"
 
 banner-supertitle: Discover
 banner-title: Hong Kong
@@ -20,17 +21,20 @@ sections:
   - title: A Foodie Nirvana
     class: food-and-drink
     content: >
-      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+      <p class="p--lead">From the clang and cries of the hawkers to the latest creation of celebrity chefs, Hong Kong offers a broad culinary repertoire. </p>
+      <p>A bonafide foodie destination, alight at rackety stalls for hearty portions of irresistible roasted meats, dip into hidden bakeries to find the city’s best pineapple bun, or enjoy the fine craft of a Michelin restaurant. Hong Kong has the cheapest Michelin restaurant in the world, so even the most forward-thinking dish is accessible to all. </p>
 
   - title: Culturally Diverse
     class: art-and-culture
     content: >
-      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+      <p class="p--lead">Ancient traditions mix seamlessly with modern preoccupations, in a city that carefully balances innovation with heritage. </p>
+      <p>Therefore it is easy to unpick the many faces of Hong Kong’s cultural landscape. Whether it’s colonial remnants seen in the architecture or the food, or the old Chinese temples and monuments that sit next to Gurdwaras and Synagogues, the city bustles with a complex yet joyful identity. See it play out on the streets, on the stage, in the museums and in the energy that charges along the roads. </p>
 
   - title: Shop ‘til you Drop
     class: shopping
     content: >
-      <p class="p--lead">Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+      <p class="p--lead">Hong Kong has long been a premiere shopping mecca. </p>
+      <p>Maybe it has something to do with the quality of shops available, or maybe it’s because you don’t pay sales tax on any purchases! Regardless, Hong Kong has something for all shoppers. From high-end boutiques in smart shopping malls, to markets packed with trinkets, tailored Chinese gowns and hidden vintage shops, you’ll find a host of unique treasures.</p>
 
 ---
 
@@ -42,9 +46,9 @@ sections:
 
     {% for section in page.sections %}
     <div class="bob" id="section-{{section.class}}">
-      <a href="{{ site.baseurl }}/{{ section.link }}" class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2 bg-image--border-radius bg-image--shadow" style="background-image:url('{{ site.baseurl }}/img/content/overview/{{ section.class }}.jpg');"></a>
+      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2" style="background-image:url('{{ site.baseurl }}/img/content/overview/{{ section.class }}.jpg');"></div>
       <div class="bob__text">
-        <h2 class="title title--small title--upper title--expanded">{{ section.title }}</h2>
+        <h2 class="title title--small">{{ section.title }}</h2>
         {{ section.content }}
       </div>
     </div>
@@ -55,9 +59,44 @@ sections:
 
 
 
+
+{% assign pois = site.data.top-pois | sort:"number" | reverse %}
+<section class="section--padding-large bg--light-grey">
+
+  <div class="row row--padding align-center">
+    <h2 class="title title--display title--large title--upper title--expanded">Hong Kong Top 10</h2>
+  </div>
+
+  <div class="row row--padding cycle-slideshow"
+    data-cycle-fx="carousel"
+    data-cycle-timeout="0"
+    data-cycle-carousel-visible="3"
+    data-cycle-slides=".poi"
+    data-cycle-prev="#prev"
+    data-cycle-next="#next">
+    {% for poi in pois %}
+      {% include pois/top-poi.html %}
+    {% endfor %}
+  </div>
+  <div class="cycle-nav row row--padding align-center">
+    <span class="cycle-prev btn" id="prev">
+      <img src="{{site.baseurl}}/img/icons/arrow-left.png" class="js-svg-swap" alt="Previous" width="60">
+    </span>
+    <span class="cycle-next btn" id="next">
+      <img src="{{site.baseurl}}/img/icons/arrow-right.png" class="js-svg-swap" alt="Next" width="60">
+    </span>
+  </div>
+  {% include pois/modal-top-pois.html %}
+
+</section>
+
+
+
+
 <section class="section--padding-large bg--partner-primary invert-text align-center">
   <div class="row row--padding">
-    <h2 class="title title--large title--upper title--expanded title--light title--serif">Get exploring</h2>
+    <h2 class="title title--large title--display title--upper title--expanded">Get exploring</h2>
+    <p class="p--lead">Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. </p>
     <a href="{{ site.baseurl }}/explore" class="btn btn--invert btn--large">Start now</a>
   </div>
 </section>

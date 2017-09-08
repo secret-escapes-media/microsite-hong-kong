@@ -1,0 +1,31 @@
+
+<div class="js-modal modal is-closed">
+  <div class="modal__ui-wrap row">
+    <div class="js-close-modal modal__close"></div>
+    <div class="js-modal-nav modal__nav modal__nav--next" data-nav-direction="next"></div>
+    <div class="js-modal-nav modal__nav modal__nav--previous" data-nav-direction="previous"></div>
+    <div class="modal__content-wrap row">
+
+      {% for poi in pois %}
+      <div class="modal__content modal__content--{{poi.title | slugify}}"  data-content-category="{{poi.section}}">
+
+        <div class="bg-image bg-image--ratio bg-image--ratio-16-9" style="background-image:url('{{site.baseurl}}/img/content/pois/{{poi.title | slugify}}.jpg')"></div>
+
+        <div class="modal__content--padding align-center">
+
+          <h2 class="title title--smaller title--upper title--expanded">{{poi.title}}</h2>
+
+          {% if poi.location %}
+            <p class="poi__location title">{{ poi.location }}</p>
+          {% endif %}
+
+          <hr class="hr--center">
+
+          {{poi.content}}
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
