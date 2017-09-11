@@ -32,6 +32,7 @@ input, textarea, keygen, select, button {
   letter-spacing: .025em;
   line-height: 1.2;
   font-family: $title-font-family;
+  font-weight: 400;
   + * { margin-top: 0.75em; }
 
   &--display { font-family: $display-font-family; }
@@ -72,8 +73,6 @@ input, textarea, keygen, select, button {
   &--tiny        { font-size: 1.44em; }
   &--micro       { font-size: 1.2em; }
   @include bp(large){
-    &--light     { font-weight: 200; }
-
     &--largest     { font-size: 6em; }
     &--larger      { font-size: 4.8em; }
     &--large       { font-size: 4em; }
@@ -83,8 +82,8 @@ input, textarea, keygen, select, button {
     &--smallest     { font-size: 1.75em; }
   }
   @include bp(xxlarge){
-    &--largest     { font-size: 8em; }
-    &--larger      { font-size: 6em; }
+    &--largest     { font-size: 7em; }
+    &--larger      { font-size: 5em; }
     &--large       { font-size: 4em; }
     &--medium      { font-size: 2.833em; }
     &--small       { font-size: 2.367em; }

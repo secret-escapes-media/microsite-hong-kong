@@ -229,7 +229,7 @@ $(document).scroll(function() {
 	var wh = $(window).height();
 
 	$('.title-banner__overlay').css({
-    "opacity": st / (wh*1.5) + 0.15
+    "opacity": st / (wh) + 0.15
 	});
 });
 

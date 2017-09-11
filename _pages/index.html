@@ -4,7 +4,7 @@ layout: basic
 title: Overview
 class: overview
 nav-order: 1
-color: "#e4003a"
+color: "#480127"
 
 banner-supertitle: Discover
 banner-title: Hong Kong
@@ -12,7 +12,8 @@ banner-title: Hong Kong
 
 
 intro: >
-  <p class="p--lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  <p class="p--lead">Hong Kong is a destination set to send even the most experienced traveller’s senses reeling. Rising out of thick mist in a steep bay, tall towers wrestle to dominate the ultra-modern skyline – a scene that, at night, lights up and seems to ignite the waters in a rainbow of colour. </p>
+  <p class="p--lead">Yet for all its modernity, tradition, heritage and culture rules. From family-run hawker stands enticing you to try exotic treats, to the lively markets juxtaposing the serenity of the temples and holy sites that dot the islands, Hong Kong is a place of constant surprise. Look out over the picturesque bay from a trendy rooftop cocktail joint, or glide through the city from the top deck of the kitsch tramcars before heading out of town for spirited walks in sublime tropical climes. </p>
 
 
 
@@ -33,7 +34,7 @@ sections:
   - title: Shop ‘til you Drop
     class: shopping
     content: >
-      <p class="p--lead">Hong Kong has long been a premiere shopping mecca. </p>
+      <p class="p--lead">Hong Kong has long been a premiere shopping mecca.</p>
       <p>Maybe it has something to do with the quality of shops available, or maybe it’s because you don’t pay sales tax on any purchases! Regardless, Hong Kong has something for all shoppers. From high-end boutiques in smart shopping malls, to markets packed with trinkets, tailored Chinese gowns and hidden vintage shops, you’ll find a host of unique treasures.</p>
 
 ---
@@ -65,6 +66,7 @@ sections:
 
   <div class="row row--padding align-center">
     <h2 class="title title--display title--large title--upper title--expanded">Hong Kong Top 10</h2>
+    <p class="p--lead">Our top 10 favourite things to see and do on a first trip to Hong Kong</p>
   </div>
 
   <div class="row row--padding cycle-slideshow"
@@ -74,18 +76,20 @@ sections:
     data-cycle-slides=".poi"
     data-cycle-prev="#prev"
     data-cycle-next="#next">
+
     {% for poi in pois %}
       {% include pois/top-poi.html %}
     {% endfor %}
+
+    <a href="javascript:void();" class="cycle-prev" id="prev">
+      <img src="{{site.baseurl}}/img/icons/arrow-left-black.png" class="js-svg-swap" alt="Previous" width="60">
+    </a>
+    <a href="javascript:void();" class="cycle-next" id="next">
+      <img src="{{site.baseurl}}/img/icons/arrow-right-black.png" class="js-svg-swap" alt="Next" width="60">
+    </a>
+
   </div>
-  <div class="cycle-nav row row--padding align-center">
-    <span class="cycle-prev btn" id="prev">
-      <img src="{{site.baseurl}}/img/icons/arrow-left.png" class="js-svg-swap" alt="Previous" width="60">
-    </span>
-    <span class="cycle-next btn" id="next">
-      <img src="{{site.baseurl}}/img/icons/arrow-right.png" class="js-svg-swap" alt="Next" width="60">
-    </span>
-  </div>
+
   {% include pois/modal-top-pois.html %}
 
 </section>
@@ -93,11 +97,11 @@ sections:
 
 
 
-<section class="section--padding-large bg--partner-primary invert-text align-center">
+<section class="section--padding-xlarge align-center">
   <div class="row row--padding">
-    <h2 class="title title--large title--display title--upper title--expanded">Get exploring</h2>
-    <p class="p--lead">Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. </p>
-    <a href="{{ site.baseurl }}/explore" class="btn btn--invert btn--large">Start now</a>
+    <h2 class="title title--large title--display title--upper title--expanded">Start exploring</h2>
+    <p class="p--lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. </p>
+    <a href="{{ site.baseurl }}/explore" class="btn btn--large">Discover Hong Kong</a>
   </div>
 </section>
 

@@ -4,76 +4,76 @@
 
 ##  ==== Central & Soho // central-and-soho ====
 
-- title: Highlight 1
-  location: Central & Soho
+- title: Club 71
+  location: Hollywood Road, Central
   section: central-and-soho
-  content: Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+  content: With so many upmarket bars to pick from, why go to this rather simple, unassuming bar? Club 71 is the hangout for Hong Kong’s artists, activists, and journalists, ad-libbing on the virtues of Trotskyism and the price of the beer. It’s a bohemian haunt, a colourfully-painted hangout that inspires friendly, intellectual conversation. Prop yourself up and meet the locals.
 
-- title: Highlight 2
-  location: Central & Soho
+- title: Man Mo Temple
+  location: Hollywood Road, Central
   section: central-and-soho
-  content: Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  content: One of Hong Kong’s oldest temples, Man Mo is a serene spiritual outpost in the heart of the city. Man represents the gods of literature, and Mo the gods of war. This Taoist temple was built in 1847 by wealthy Chinese merchants, oft hosting disputes between the Chinese and colonialists. The heady atmosphere beguiles any visitor, proving a thoroughly enchanting experience.
 
-- title: Highlight 3
-  location: Central & Soho
+- title: Lan Kwai Fong
+  location:
   section: central-and-soho
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  content: The classic nightspot since the ‘80s, LKF is a byword for Hong Kong nightlife. Packed-out bars buzz with classic dancefloor hits, where revellers spill out into the streets charging the night with energy. These are well-worn stomping grounds, but the sheer excitement the streets muster makes LKF an addictive place to dance the night away...
 
 
 
 ##  ==== Causeway Bay // causeway-bay ====
 
-- title: Highlight 4
-  location: Causeway Bay
+- title: Boutique Shopping
+  location:
   section: causeway-bay
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  content: With all the high-end stores vying for your attention (and more importantly, your money), it may pay to seek out something a little more unique. Discover local designers for truly cutting-edge fashion. Try the Island Beverley Mall, a place of youthful exuberance with bright fashions crammed into micro-shops sat at the forefront of Hong Kong’s fashion trends.
 
-- title: Highlight 5
-  location: Causeway Bay
+- title: Food Street
+  location: Houston Street, Causeway Bay
   section: causeway-bay
-  content: Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+  content: If you’re doing Causeway Bay the right way, you’ll need a refuel before digging out your new outfit. Head over to cleverly named Food Street, for al fresco dining spots that embody the fact that Hong Kong is a premiere foodie destination.
 
-- title: Highlight 6
-  location: Causeway Bay
+- title: Times Square
+  location: Matheson Street, Causeway Bay
   section: causeway-bay
-  content: Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.
+  content: Hong Kong’s Times Square shares much of the awe-inspiring drama of New York’s counterpart. Best seen at night, Times Square lights up in a myriad of colours that reach to the tops of the surrounding glass and steel monoliths. Plus, all the shops stay open late into the night.
 
 
 
 
-##  ==== Sheng Wuan // sheng-wuan ====
+##  ==== Sheung Wuan // sheung-wuan ====
 
-- title: Highlight 7
-  location: Sheng Wuan
-  section: sheng-wuan
-  content: Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.
+- title: Cat Street Market
+  location: Upper Lascar Row, Hong Kong
+  section: sheung-wan
+  content: Find your treasures at the Cat Street Market. If you can look past the tourist trinkets, you’ll find plenty of antiques and vintage collectibles waiting to be bartered for. A whole host of vintage Chinese kitsch awaits, from figurines and vast posters of Chairman Mao, to pin-up girls on postcards and piles of old cameras.
 
-- title: Highlight 8
-  location: Sheng Wuan
-  section: sheng-wuan
-  content: Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+- title: Tai Ping Shan Street
+  location:
+  section: sheung-wan
+  content: This trendy street is lined with indie spots flogging delicious brunches and coffee, local arts and crafts, plus hosting small exhibitions for upcoming artists. Pop-ups rule down this historic street, meaning you’ll always be treated to the most current Hong Kong trends.
 
-- title: Highlight 9
-  location: Sheng Wuan
-  section: sheng-wuan
-  content: Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+- title: Yardbird
+  location: Tai Ping Shan, Hong Kong
+  section: sheung-wan
+  content: The brainchild of acclaimed restaurateur Lindsay Jang, Yardbird is a hip ode to the chicken. A Japanese approach offers the bird dished up in a mouth-watering variety, each more delicious than the last. When it launched, Yardbird was the talk of the town. No reservations, long queues. Get down early and indulge.
 
 
 
 
 ##  ==== Sai Ying Pun // sai-ying-pun ====
 
-- title: Highlight 10
-  location: Sai Ying Pun
+- title: Ping Pong 129 Gintoneria
+  location: Second St, Sai Ying Pun
   section: sai-ying-pun
-  content: Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Maecenas faucibus mollis interdum.
+  content: A bright red door is the only signal to show you’ve arrived. This trendy speakeasy has taken the Spanish gin and tonic craze to Hong Kong, creating a chic setting that mixes classic local aesthetic with an international flavour. Order irresistible mixes and snack on tapas from the kitchen. Perfect.
 
-- title: Highlight 11
-  location: Sai Ying Pun
+- title: Flying Pig Bistro
+  location: High St, Sai Ying Pun
   section: sai-ying-pun
-  content: Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.
+  content: An ode to pubs across the world, this graffitied, arty bar does two things and does them well. Craft beer flows from the bar taps, as pork, and more pork, flies out the kitchen to the delight of locals. From sliders to schnitzel, this hip spot is a love letter to pubs everywhere.
 
-- title: Highlight 12
-  location: Sai Ying Pun
+- title: Sweet Classroom
+  location: Third St, Sai Ying Pun
   section: sai-ying-pun
-  content: Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
+  content: After filling your belly in this foodie hot spot, you’ll wonder if there’s any room left. Well, for this place, of course there is! This tiny place dishes up a host of irresistible sweet treats. The unconventional tiramisu is recommended...

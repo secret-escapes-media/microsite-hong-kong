@@ -7,14 +7,14 @@
   style="background-image: url('{{ site.baseurl }}/img/content/pois/{{ poi.title | slugify }}.jpg');">
 
   <div class="poi__title">
-    <h4 class="title title--micro title--upper title--expanded"><span class="title--bolder">{{ poi.number }}</span> {{ poi.title }}</h2>
+    <h4 class="title title--micro title--upper title--expanded"><span class="poi__title-num">{{ poi.number }}</span> {{ poi.title }}</h2>
   </div>
 
   <div class="poi__content">
     {% if poi.location %}
       <div class="poi__location">{{ poi.location }}</div>
     {% endif %}
-    <p>{{ poi.content | strip_html | strip_newlines | truncate: 100 }}</p>
+    <p>{{ poi.content | truncate: 100 }}</p>
   </div>
 
 </a>
