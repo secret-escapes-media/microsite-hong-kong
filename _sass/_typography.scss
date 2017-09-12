@@ -138,7 +138,7 @@ input, textarea, keygen, select, button {
       font-size: 1.2em;
       line-height: 1.6;
     }
-    &--large { font-size: 1.05em; }
+    &--large { font-size: 1.4em; font-weight: 300; }
   }
 }
 .align-center p,
@@ -256,8 +256,13 @@ a {
   * + & { margin-top: 1.5em; }
 
   &--invert {
-    background-color: rgba($white,0.8); color: $partner-primary;
-    &:hover { background-color: $white; color: $partner-primary; }
+    background-color: $white; color: $partner-primary;
+    &:hover { background-color: $white; color: $partner-secondary; }
+  }
+
+  &--ba {
+    background-color: $ba-secondary;
+    &:hover { background-color: darken($ba-secondary, 10); }
   }
 
   &--se {

@@ -1,19 +1,4 @@
 
-## ATHENS // athens
-## =======================================
-
-  # - title:
-  #   category: athens
-  #   location:
-  #   description:
-  #   price:
-  #   price-description:
-  #   saved:
-  #   link:
-
-## CYCLADES // cyclades
-## Santorini, Mykonos, Paros, Tinos, Naxos, Milos
-## =======================================
 
   - title: Luxury boutique Santorini holiday with a private hot tub
     category: cyclades
@@ -25,9 +10,6 @@
     link: https://www.secretescapes.com/luxury-boutique-santorini-holiday-with-a-private-hot-tub-amara-suites-greece/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Amara
 
 
-## CRETE // crete-and-the-dodecanese
-## Crete, Rhodes, Kos, Symi, Nisyros, Kalymnos
-## =======================================
 
   - title: 5* Crete holiday at a lush retreat
     category: crete-and-the-dodecanese
@@ -38,6 +20,8 @@
     saved: 20
     link: https://www.secretescapes.com/5-star-crete-holiday-at-a-lush-retreat-filion-suites-resort-and-spa-greek-islands/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Filion
 
+
+
   - title: Porto Elounda Golf & Spa Resort
     category: crete-and-the-dodecanese
     location: Crete, Greek Islands
@@ -47,6 +31,8 @@
     saved: 61
     link: https://www.secretescapes.com/porto-elounda-golf-and-spa-resort-crete-greek-islands/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_PortoElounda_Crete
 
+
+
   - title: Scalani Hills Boutari Winery & Residences
     category: crete-and-the-dodecanese
     location: Crete, Greece
@@ -55,40 +41,3 @@
     price-description: per person per night
     saved: 49
     link: https://www.secretescapes.com/scalani-hills-boutari-winery-and-residences-crete-greece/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Scalani
-
-  - title: All-inclusive Crete holiday at an adults-only resort
-    category: crete-and-the-dodecanese
-    location: Grand Bay Beach Resort, Greek Islands
-    description: An elegant, adults-only stay on the seafront, with a junior suite and all-inclusive board
-    price: 399
-    price-description: per person for 5 nights
-    saved: 51
-    link: https://www.secretescapes.com/all-inclusive-crete-holiday-at-an-adults-only-resort-grand-bay-beach-resort-greek-islands/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Crete_GrandBay
-
-
-## IONIAN ISLANDS // ionian-islands
-## Corfu, Kefalonia, Zakynthos, Lefkada, Ithaca, Paxos
-## =======================================
-
-  - title: Chilled Kefalonia holiday
-    category: ionian-islands
-    location: Aenos Hotel, Greek Islands
-    description: Greek Island chilling at a recently revamped hotel in a prime spot on Argostoli's main square
-    price: 349
-    price-description: per person for 5 nights
-    saved: 23
-    link: https://www.secretescapes.com/chilled-kefalonia-holiday-aenos-hotel-greek-islands/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Aenos
-
-
-## THE MAINLAND // the-mainland
-## Peloponnese, Halkidiki, Mountains, Thessaloniki, Pelion, Delphi
-## =======================================
-
-  - title: 5* Halkidiki holiday at a luxe spa resort
-    category: the-mainland
-    location: Miraggio Thermal Spa Resort, Greece
-    description: A suite stay at a five-star spa resort on the Halkidiki peninsula, with all travel
-    price: 499
-    price-description: per person for 5 nights
-    saved: 59
-    link: https://www.secretescapes.com/5-star-halkidiki-holiday-at-a-luxe-spa-resort-miraggio-thermal-spa-resort-greece-uk/sale?utm_source=SE&utm_medium=Hub&utm_campaign=Greece_2017_Miraggio

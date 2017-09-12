@@ -44,6 +44,7 @@ section,.section {
   @include container( $xxxxlarge );
   position: relative;
   & + .row { margin-top: $margin; }
+  &--100 { @include container(100%);}
   &--thinner {
     position: relative;
     @include container( $xxlarge );
@@ -151,6 +152,13 @@ section,.section {
     align-items: center;
   }
 
+}
+
+// only used on the competition page, bit of an outlier
+.row--columns-4-4-4-no-break .row__column {
+  @include gallery(4);
+  line-height: 0;
+  margin-top: 0;
 }
 
 

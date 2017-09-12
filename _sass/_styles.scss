@@ -28,6 +28,8 @@ body { background-color: $white; }
   &--partner-secondary { background-color: $partner-secondary; }
   &--partner-tertiary { background-color: $partner-tertiary; }
   &--partner-black { background-color: $partner-black; }
+  &--ba-primary   { background-color: $ba-primary; }
+  &--ba-secondary { background-color: $ba-secondary; }
 }
 
 // -- Page intro sections --
@@ -195,15 +197,16 @@ body { background-color: $white; }
     top: 0.66em;
     left: -0.66em;
     padding: 0.66em 0.66em;
+    white-space: normal;
     & .title {
       color: $white;
     }
     &-num {
       font-weight: 600;
-      background-color: rgb(255, 0, 65);
+      background-color: $partner-primary;
       text-align: center;
       padding: 0em 0;
-      width: 30px;
+      width: 24px;
       height: 10px;
       letter-spacing: 0;
       line-height: 0;
