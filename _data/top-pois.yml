@@ -1,48 +1,49 @@
 
-  - title: Victoria Peak
-    location: The Peak, Hong Kong
-    number: 1
-    content: The highest peak in Hong Kong is a well-deserved tourist trap. A trip to the heady heights offers superlative panorama of the city, the South China Sea and the outlying islands that dot the bay. Head to the top on the ancient funicular, which seemingly defies gravity as it trundles to the top. Just make sure it’s a clear day!
 
   - title: Markets
     location:
+    number: 1
+    content: Markets full of colourful bagged goldfish, markets dedicated to caged birds of all description and full of song, and more enticing bites than you could ever hope to try. Hong Kong’s markets are unique, electrifying spaces not to be missed. Mongkok is famous for it, but also head to the equally known Temple Street Night Market for sundown feasting and treasure hunting.
+
+  - title: Victoria Peak
+    location: The Peak, Hong Kong
     number: 2
-    content: Markets full of colourful bagged goldfish, markets dedicated to caged birds of all description and full of song, knock-off designer wear, fake DVDs and more enticing bites than you could ever hope to try. Hong Kong’s markets are unique,electrifying spaces not to be missed. Mongkok is famous for it, but also head to the equally known Temple Street Night Market for sundown feasting and treasure hunting.
+    content: The highest peak in Hong Kong is a well-deserved tourist trap. A trip to the heady heights offers superlative panorama of the city, the South China Sea and the outlying islands that dot the bay. Head to the top on the ancient funicular, which seemingly defies gravity as it trundles to the top. Just make sure it’s a clear day!
+
+  - title: Causeway Bay Shopping
+    location: Causeway Bay, Hong Kong
+    number: 3
+    content: The premiere shopping destination is a warren of luxury designer stores and high-end boutiques. For those that enjoy the finer things, don’t miss this chance to indulge your shopping addiction.
 
   - title: Big Buddha
     location: Lantau Island, Hong Kong
-    number: 3
-    content: Perched high on Lantau Island, the Big Buddha is a gargantuan statement to the importance of Buddhism in the area. A deeply spiritual spot, climb the endless staircase for great views and awe-inspiring glimpses at the bronze monolith.
-
-  - title: Causeway Bay Shopping
-    location:
     number: 4
-    content:
-
-  - title: Mid-Levels Escalator
-    location:
-    number: 5
-    content:
-
-  - title: Star Ferry
-    location: Hong Kong's Bay
-    number: 6
-    content: The Star Ferry is the best way to get across Hong Kong’s bay. It’s cheap, offers brilliant views of the bay, and is a great way to escape the energy of the city.
-
-  - title: Hong Kong Trail
-    location:
-    number: 7
-    content: This celebrated hiking trail covers 50km, winding through all of the national parks on Hong Kong island. As a complete dichotomy to the city escape that Hong Kong affords, take advantage of this superlative trail. The most popular section, for good reason, is named the Dragon’s Back, offering stunning 360º panorama.
+    content: Perched high on Lantau Island, the Big Buddha is a gargantuan statement to the importance of Buddhism in the area. A deeply spiritual spot, climb the endless staircase for great views and awe-inspiring glimpses at the bronze monolith.
 
   - title: Dim Sum
     location:
-    number: 8
+    number: 5
     content: Dim Sum is the quintessential luncheon for Hong Kong locals and a great way to get your first taste of this dynamic foodie capital. From the super traditional tea houses like Lin Heung Tea House to the cheapest Michelin-starred restaurant in the world, Tim Ho Wan (expect hours of queues), Dim Sum is a must try.
 
   - title: Ride the Ding-Ding
     location: Hong Kong Island
-    number: 9
+    number: 6
     content: Affectionately named after the clanging of the bells, these vintage tramcars still trundle through the city. With two decks to pick from, certain lines offer great views of the city. If you can, use the trolley to get you around for a perfect snapshot of vintage Hong Kong.
+
+  - title: Star Ferry
+    location: Hong Kong's Bay
+    number: 7
+    content: The Star Ferry is the best way to get across Hong Kong’s bay. It’s cheap, offers brilliant views of the bay, and is a great way to escape the energy of the city.
+
+  - title: Mid-Levels Escalator
+    location: Central and Western, Hong Kong
+    number: 8
+    content: An oddity that only a place like Hong Kong could produce. Connecting the Central and Western districts, this set of escalators has become the chosen commuter tool for those living on the Mid-Levels. Hop on for views of the city on this strange yet perfectly sensible transport.
+
+  - title: Hong Kong Trail
+    location:
+    number: 9
+    content: This celebrated hiking trail covers 50km, winding through all of the national parks on Hong Kong island. As a complete dichotomy to the city escape that Hong Kong affords, take advantage of this superlative trail. The most popular section, for good reason, is named the Dragon’s Back, offering stunning 360º panorama.
 
   - title: Lamma Island
     location: Lamma Island, Hong Kong
