@@ -1,14 +1,14 @@
 
 
   - title: Markets
-    location:
+    location: Various locations
     number: 1
-    content: Markets full of colourful bagged goldfish, markets dedicated to caged birds of all description and full of song, and more enticing bites than you could ever hope to try. Hong Kong’s markets are unique, electrifying spaces not to be missed. Mongkok is famous for it, but also head to the equally known Temple Street Night Market for sundown feasting and treasure hunting.
+    content: Hong Kong’s markets are unique,electrifying spaces not to be missed. Mongkok is famous for unique sights like the Ladies’ Market and Sneaker Market to mention a few. All tastes are seemingly catered for, from sunrise to sundown – head to Temple Street Night Market for sundown feasting after a day of treasure hunting in a myriad of buzzing markets.
 
   - title: Victoria Peak
     location: The Peak, Hong Kong
     number: 2
-    content: The highest peak in Hong Kong is a well-deserved tourist trap. A trip to the heady heights offers superlative panorama of the city, the South China Sea and the outlying islands that dot the bay. Head to the top on the ancient funicular, which seemingly defies gravity as it trundles to the top. Just make sure it’s a clear day!
+    content: The highest peak in Hong Kong is home to an iconic experience – a trip to the heady heights offers superlative panorama of the city, the South China Sea and the outlying islands that dot the bay. Head to the top on the ancient funicular, which seemingly defies gravity as it trundles to the top.
 
   - title: Causeway Bay Shopping
     location: Causeway Bay, Hong Kong
@@ -18,12 +18,12 @@
   - title: Big Buddha
     location: Lantau Island, Hong Kong
     number: 4
-    content: Perched high on Lantau Island, the Big Buddha is a gargantuan statement to the importance of Buddhism in the area. A deeply spiritual spot, climb the endless staircase for great views and awe-inspiring glimpses at the bronze monolith.
+    content: Perched high on Lantau Island, the Big Buddha is a gargantuan statement to the importance of Buddhism in the area. A deeply spiritual spot, climb the endless staircase for great views and awe-inspiring glimpses at the bronze monolith. The Ngong Ping 360 cable car is quite possibly the best way to reach the area, for unforgettable views over the city.
 
   - title: Dim Sum
-    location:
+    location: Various locations
     number: 5
-    content: Dim Sum is the quintessential luncheon for Hong Kong locals and a great way to get your first taste of this dynamic foodie capital. From the super traditional tea houses like Lin Heung Tea House to the cheapest Michelin-starred restaurant in the world, Tim Ho Wan (expect hours of queues), Dim Sum is a must try.
+    content: Dim Sum is the quintessential luncheon for Hong Kong locals and a great way to get your first taste of this dynamic foodie capital. From the super traditional tea houses like Lin Heung Tea House to the cheapest Michelin-starred restaurant in the world, Tim Ho Wan, Dim Sum is a must try.
 
   - title: Ride the Ding-Ding
     location: Hong Kong Island
@@ -33,20 +33,20 @@
   - title: Star Ferry
     location: Hong Kong's Bay
     number: 7
-    content: The Star Ferry is the best way to get across Hong Kong’s bay. It’s cheap, offers brilliant views of the bay, and is a great way to escape the energy of the city.
+    content: The Star Ferry is the best way to get across Hong Kong’s bay. It’s cheap, offers brilliant views of the bay, and is a great way to take a breather from the frenetic pace of Hong Kong.
 
   - title: Mid-Levels Escalator
     location: Central and Western, Hong Kong
     number: 8
-    content: An oddity that only a place like Hong Kong could produce. Connecting the Central and Western districts, this set of escalators has become the chosen commuter tool for those living on the Mid-Levels. Hop on for views of the city on this strange yet perfectly sensible transport.
+    content: An oddity that only a place like Hong Kong could produce. Connecting the Central and Western districts, this set of escalators has become the chosen commuter tool for those living on the Mid-Levels. Hop on for views of the city and hopping between SoHo hotspots on this strange yet perfectly sensible transport.
 
   - title: Hong Kong Trail
-    location:
+    location: Hong Kong Island
     number: 9
-    content: This celebrated hiking trail covers 50km, winding through all of the national parks on Hong Kong island. As a complete dichotomy to the city escape that Hong Kong affords, take advantage of this superlative trail. The most popular section, for good reason, is named the Dragon’s Back, offering stunning 360º panorama.
+    content: This celebrated hiking trail covers 50km, winding through all of the national parks on Hong Kong island. As a complete dichotomy to the city escape that Hong Kong affords, plus going some way to explain that Hong Kong is in fact 70% green, take advantage of this superlative trail. The most popular section, for good reason, is named the Dragon’s Back, offering stunning 360º panorama.
 
   - title: Lamma Island
     location: Lamma Island, Hong Kong
     number: 10
-    content: Known as Hippie Island, Lamma is a relaxed space that has avoided the high-rise modernity of the city. Aside from three iconic chimney stacks, the island is a natural playground of quaint villages, rolling beaches and a main town home to Hong Kong’s original counter-culture.
+    content: Known for excellent seafood and its unspoilt charms, Lamma is a relaxed space that has avoided the high-rise modernity of the city. Aside from three iconic chimney stacks, the island is a natural playground of quaint villages, rolling beaches and stunning hikes.
 

@@ -18,6 +18,7 @@ body { background-color: $white; }
   &--light-grey { background-color: $light-grey; }
   &--grey { background-color: $grey; }
   &--dark-grey  { background-color: $dark-grey; }
+  &--darker-grey  { background-color: $darker-grey; }
   &--text-black     { background-color: $text-black; }
   &--text-heading   { background-color: $text-heading; }
   &--text-paragraph { background-color: $text-paragraph; }
@@ -36,12 +37,6 @@ body { background-color: $white; }
 .intro {
   position: relative;
   overflow: hidden;
-
-  &__content {
-    background-color: $partner-black;
-    color: $white;
-    & .title { color: $white; }
-  }
 
   .page-links {
     &__item {
@@ -283,15 +278,15 @@ body { background-color: $white; }
   }
   &:before {
     left: 0;
-    background: -moz-linear-gradient(right, rgba($light-grey,0) 0%, rgba($light-grey,1) 100%);
-    background: -webkit-linear-gradient(right, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
-    background: linear-gradient(to left, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
+    background: -moz-linear-gradient(right, rgba($white,0) 0%, rgba($white,1) 100%);
+    background: -webkit-linear-gradient(right, rgba($white,0) 0%,rgba($white,1) 100%);
+    background: linear-gradient(to left, rgba($white,0) 0%,rgba($white,1) 100%);
   }
   &:after {
     right: 0;
-    background: -moz-linear-gradient(left, rgba($light-grey,0) 0%, rgba($light-grey,1) 100%);
-    background: -webkit-linear-gradient(left, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
-    background: linear-gradient(to right, rgba($light-grey,0) 0%,rgba($light-grey,1) 100%);
+    background: -moz-linear-gradient(left, rgba($white,0) 0%, rgba($white,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($white,0) 0%,rgba($white,1) 100%);
+    background: linear-gradient(to right, rgba($white,0) 0%,rgba($white,1) 100%);
   }
 }
 .cycle-carousel-wrap {
@@ -307,7 +302,7 @@ body { background-color: $white; }
   margin-top: -32px;
   z-index: 5;
   padding: 1em;
-  background-color: #f2f2f2;
+  background-color: $white;
   .csstransforms & {
     margin-top: 0;
     transform: translateY(-50%);

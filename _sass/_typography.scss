@@ -45,6 +45,7 @@ input, textarea, keygen, select, button {
     &-small + * { margin-top: 0.5; }
     &-none { margin-top: 0; }
     &-none + * { margin-top: 0; }
+    &-bottom { margin-bottom: 1em; }
   }
 
   &--super-heading { margin-top: 0 !important; }
@@ -247,7 +248,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 0.85em;
   letter-spacing: 0.2em;
   &:hover {
     background-color: darken($partner-primary,0.2);
@@ -271,14 +272,20 @@ a {
     &.btn--invert { color: $se-orange; background-color: $white; }
   }
 
-  &--small { font-size: 0.85em; padding: .4em 2em; }
+  &--small { font-size: 0.8em; padding: .4em 2em; }
   @include bp(large){
-    &--large { font-size: 1em; padding: .7em 3em; }
+    &--large { font-size: 0.9em; padding: .7em 3em; }
   }
 
   &--subtle {
     background-color: $light-grey; color: $dark-grey;
     &:hover { background-color: darken($light-grey, 10); }
+  }
+
+  &--outline {
+    border: 1px solid $light-grey; color: $dark-grey;
+    background-color: transparent;
+    &:hover { border-color: darken($light-grey, 10); background-color: transparent; }
   }
 
 }

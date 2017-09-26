@@ -384,7 +384,7 @@ $icon-size: 27px;
     }
   }
   &--partner {
-    max-width: 160px;
+    max-width: 190px;
     & + & {
       padding-left: 1em;
     }
@@ -419,5 +419,5 @@ $icon-size: 27px;
   }
   p { margin-top: .5em; }
   .logo--secret-escapes { max-width: 110px; }
-  .logo--partner { max-width: 120px; }
+  .logo--partner { max-width: 155px; }
 }

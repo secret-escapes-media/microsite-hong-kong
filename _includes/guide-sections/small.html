@@ -9,7 +9,10 @@
     {% if section.subtitle %}
       <h4 class="title title--micro title--display title--bold title--upper title--expanded">{{ section.subtitle }}</h4>
     {% endif %}
-  {{ section.content }}
+    {{ section.content }}
+    {% if section.link %}
+    <a href="{{section.link}}" class="btn btn--large">Discover more</a>
+    {% endif %}
   </div>
 
 </div>

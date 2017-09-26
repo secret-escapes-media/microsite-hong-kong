@@ -3,7 +3,7 @@
 {% if page.intro %}
 <div class="intro">
 
-  <section class="intro__content intro--{{ page.class }}">
+  <section class="intro__content intro--{{ page.class }} {% unless page.class == 'overview' %}bg--partner-black invert-text{% endunless %}">
 
 
     <div class="row row--padding align-center">
