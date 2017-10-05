@@ -12,7 +12,7 @@ banner-title: Hong Kong
 
 
 intro: >
-  <p class="p--lead">Hong Kong is a destination set to send even the most experienced traveller’s senses reeling. Rising out of a beguiling mist in a steep bay, tall towers rise to dominate the ultra-modern skyline – a scene that, at night, lights up and seems to ignite the waters in a rainbow of colour. </p>
+  <p class="p--lead">Hong Kong is a destination set to send even the most experienced traveller’s senses reeling. Rising out of an enchanting mist in a steep bay, tall towers rise to dominate the ultra-modern skyline – a scene that, at night, lights up and seems to ignite the waters in a rainbow of colour. </p>
   <p class="p--lead">Yet for all its modernity – tradition, heritage and culture rules. From family-run hawker stands enticing you to try exotic treats, to the lively markets juxtaposing the serenity of the temples and holy sites that dot the islands, Hong Kong is a place of constant surprise. Look out over the picturesque bay from a trendy rooftop cocktail bar, or glide through the city from the top deck of the kitsch tramcars before heading out of town for spirited walks in sublime tropical climes. </p>
 
 
@@ -21,28 +21,32 @@ sections:
 
   - title: A Foodie Nirvana
     class: food-and-drink
+    image-credit: (c) Michelin Star dining at Duddell's, Hong Kong
+    link: http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/foodie-heaven.html?utm_source=Secret%20Escapes&utm_medium=Microsite&utm_campaign=2017&utm_content=Foodie%20Nirvana
     content: >
       <p class="p--lead">From the clang and cries of the hawkers to the latest creation of celebrity chefs, Hong Kong offers a broad culinary repertoire. </p>
       <p>A bonafide foodie destination, alight at rackety stalls for hearty portions of irresistible roasted meats, dip into hidden bakeries to find the city’s best pineapple bun, or enjoy the fine craft of a Michelin restaurant. Hong Kong has the cheapest Michelin restaurant in the world, so even the most forward-thinking dish is accessible to all. </p>
-      <a href="http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/foodie-heaven.html" target="_blank" class="btn btn--large">Discover more</a>
 
   - title: Culturally Diverse
     class: art-and-culture
+    link: http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/spirit-of-the-east.html?utm_source=Secret%20Escapes&utm_medium=Microsite&utm_campaign=2017&utm_content=Culturally%20Diverse
     content: >
       <p class="p--lead">Ancient traditions mix seamlessly with modern preoccupations, in a city that carefully balances innovation with heritage. </p>
       <p>Therefore it is easy to unpick the many faces of Hong Kong’s cultural landscape. Whether it’s colonial remnants seen in the architecture or the food, or the old Chinese temples and monuments that sit next to Gurdwaras and Synagogues, the city bustles with a complex yet joyful identity. See it play out on the streets, on the stage, in the museums and in the energy that charges along the roads. </p>
 
   - title: Shop ‘til you Drop
     class: shopping
+    link: http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/retail-therapy.html?utm_source=Secret%20Escapes&utm_medium=Microsite&utm_campaign=2017&utm_content=Retail%20Therapy
     content: >
       <p class="p--lead">Hong Kong has long been a premiere shopping mecca.</p>
       <p>Maybe it has something to do with the quality of shops available, or maybe it’s because you don’t pay sales tax on any purchases! Regardless, Hong Kong has something for all shoppers. From high-end boutiques in smart shopping malls, to markets packed with trinkets, tailored Chinese gowns and hidden vintage shops, you’ll find a host of unique treasures.</p>
 
   - title: Outdoor Surprises
     class: outdoor
+    image-credit: (c) Ma Yon Yon (Myy)
+    link: http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/great-outdoors.html?utm_source=Secret%20Escapes&utm_medium=Microsite&utm_campaign=2017&utm_content=Outdoor%20Surprises
     content: >
       <p>There's more to Hong Kong than high rises and bustling hot spots – the breathtaking, laid-back outlying islands are a world away from the city’s trademark buzzing pace. Climb Lantau Peak at dawn for the best sunrise vantage point or swim the turquoise waters of Tai Long Wan.</p>
-      <a href="http://www.discoverhongkong.com/uk/promotions/experience-hongkong/category/great-outdoors.html" target="_blank" class="btn btn--large">Discover more</a>
 
 ---
 
@@ -54,11 +58,17 @@ sections:
 
     {% for section in page.sections %}
     <div class="bob" id="section-{{section.class}}">
-      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2" style="background-image:url('{{ site.baseurl }}/img/content/overview/{{ section.class }}.jpg');"></div>
+
+      <div class="bob__image bg-image bg-image--ratio bg-image--ratio-16-9 bg-image--xxlarge--ratio-3-2" style="background-image:url('{{ site.baseurl }}/img/content/overview/{{ section.class }}.jpg');">
+        {% if section.image-credit %}<div class="bg-image__credit">{{section.image-credit}}</div>{% endif %}
+      </div>
+
       <div class="bob__text">
         <h2 class="title title--small title--light">{{ section.title }}</h2>
         {{ section.content }}
+        <a href="{{section.link}}" id="tracking-btn-{{section.title|slugify}}" target="_blank" class="btn btn--large">Discover more</a>
       </div>
+
     </div>
     {% endfor %}
 
@@ -76,13 +86,15 @@ sections:
     <p class="p--lead">From Dim Sum to Ding Ding, here's our top 10 things to see and do in this enchanting city</p>
   </div>
 
+
   <div class="row row--padding cycle-slideshow"
     data-cycle-fx="carousel"
     data-cycle-timeout="0"
     data-cycle-carousel-visible="3"
     data-cycle-slides=".poi"
     data-cycle-prev="#prev"
-    data-cycle-next="#next">
+    data-cycle-next="#next"
+    data-cycle-carousel-fluid="true">
 
     {% for poi in pois %}
       {% include pois/top-poi.html %}
@@ -97,7 +109,14 @@ sections:
 
   </div>
 
-  {% include pois/modal-top-pois.html %}
+
+  <div class="row row--padding top-pois-fallback">
+    {% for poi in pois %}
+      {% include pois/top-poi.html %}
+    {% endfor %}
+  </div>
+
+  {% include pois/modal.html %}
 
 </section>
 

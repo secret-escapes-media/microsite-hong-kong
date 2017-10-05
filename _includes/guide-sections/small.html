@@ -1,6 +1,6 @@
 
 
-<div class="row row--thin guide-section--small bg--white">
+<div class="row row--thin guide-section--small bg--white" id="section-{{section.title|slugify}}">
 
   <div class="guide-section--small__image bg-image bg-image--ratio-16-9 bg-image--xlarge--ratio-3-4 bg-image--xxlarge--ratio-3-4" style="background-image:url({{site.baseurl}}/img/content/explore/{{ section.class }}.jpg);"></div>
 
@@ -11,7 +11,7 @@
     {% endif %}
     {{ section.content }}
     {% if section.link %}
-    <a href="{{section.link}}" class="btn btn--large">Discover more</a>
+    <a href="{{section.link}}" id="tracking-btn-{{section.title|slugify}}" class="btn btn--large">Discover more</a>
     {% endif %}
   </div>
 

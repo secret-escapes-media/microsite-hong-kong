@@ -1,6 +1,6 @@
 # Site settings
 title: Hong Kong
-description:
+description: Hong Kong is a destination set to send even the most experienced traveller’s senses reeling. 
 baseurl: "/hong-kong" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 

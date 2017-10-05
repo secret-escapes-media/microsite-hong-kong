@@ -61,7 +61,7 @@ $site-nav-height: 70px;
     @include bp(small){
       &--center{ width: auto; }
     };
-    @include bp( medium ){
+    @include bp( large ){
       &--right {
         right: 0;
         display: block;
@@ -339,7 +339,7 @@ $mobile-nav-width: 75%;
     @include bp-vertical {
       position: static;
     }
-    @include bp(medium){
+    @include bp(large){
       display: none;
     }
   }

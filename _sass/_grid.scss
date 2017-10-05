@@ -184,7 +184,6 @@ section,.section {
 .bob {
   @include container(100%);
   @include layout(12 1/2);
-  text-align: center;
   &__image {
     max-width: $large;
     margin-left: auto;
@@ -194,7 +193,6 @@ section,.section {
   &__text { z-index: 1; padding-top: $margin; }
   & + & { margin-top: ($margin*2); }
   @include bp(xxlarge){
-    text-align: left;
     &__text { padding-top: $margin; }
     // GRID STUFF
     & + & { margin-top: gutter(6); }

@@ -16,15 +16,8 @@ body { background-color: $white; }
   &--white      { background-color: $white; }
   &--black      { background-color: $black; }
   &--light-grey { background-color: $light-grey; }
-  &--grey { background-color: $grey; }
   &--dark-grey  { background-color: $dark-grey; }
   &--darker-grey  { background-color: $darker-grey; }
-  &--text-black     { background-color: $text-black; }
-  &--text-heading   { background-color: $text-heading; }
-  &--text-paragraph { background-color: $text-paragraph; }
-  &--se-orange     { background-color: $se-orange; }
-  &--se-light-grey { background-color: $se-light-grey; }
-  &--se-dark-grey  { background-color: $se-dark-grey; }
   &--partner-primary   { background-color: $partner-primary; }
   &--partner-secondary { background-color: $partner-secondary; }
   &--partner-tertiary { background-color: $partner-tertiary; }
@@ -66,16 +59,38 @@ body { background-color: $white; }
 
 }
 
+
+.location {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+  font-size: 0.9em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-family: $title-font-family;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 1.5em;
+    width: 1.05em;
+    margin-right: .5em;
+    margin-bottom: .2em;
+    vertical-align: middle;
+    background-image: url( "../img/icons/map-pin.png" );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: contain;
+    .svg & { background-image: url( "../img/icons/map-pin.svg" ); }
+  }
+}
+
 /* ===============================================
  *     JAVASCRIPT SECTIONS
  * =============================================== */
-
-.accordion {
-  @include clearfix();
-  &__trigger {}
-  &--open {}
-  &--closed {}
-}
 
 .js-bg-fade {
   position: relative;
@@ -169,6 +184,22 @@ body { background-color: $white; }
     }
   }
 
+}
+
+/* ===============================================
+ *     OVERVIEW PAGE
+ * =============================================== */
+
+.top-pois-fallback {
+  display: none;
+  @include max-bp(xlarge){
+    display: block;
+    & .poi {
+      @include bp(large){
+        @include gallery($gutters 6);
+      }
+    }
+  }
 }
 
 
