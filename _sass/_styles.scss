@@ -39,6 +39,8 @@ body { background-color: $white; }
       color: #fff;
       border-radius: 100px;
       margin-top: 0.5em;
+      margin-left: .25em;
+      margin-right: .25em;
       background-color: rgba($white,0.1);
       &:hover {
         background-color: rgba($white,0.2);

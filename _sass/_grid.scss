@@ -190,7 +190,13 @@ section,.section {
     margin-right: auto;
     z-index: 0;
   }
-  &__text { z-index: 1; padding-top: $margin; }
+  &__text {
+    z-index: 1;
+    max-width: $large;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $margin;
+  }
   & + & { margin-top: ($margin*2); }
   @include bp(xxlarge){
     &__text { padding-top: $margin; }
