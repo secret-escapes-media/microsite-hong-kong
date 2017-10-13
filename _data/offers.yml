@@ -1,34 +1,38 @@
+- title: TUVE Hong Kong
+  image: tuve.jpg
+  location: Hong Kong, China
+  description: A striking boutique hotel with rooms that could be straight out of a design journal
+  price: 86
+  price-description: per room per night
+  saved: 51
+  link: https://www.secretescapes.com/tuve-hong-kong-china/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
+- title: Dreamy Hong Kong & 5* pristine Borneo holiday
+  image: dreamy.jpg
+  location: Harbour Plaza North Point & Shangri-La's Tanjung Aru Resort & Spa
+  description: Discover buzzing Hong Kong and five-star beach bliss in Borneo
+  price: 1789
+  price-description: per person for 10 nights
+  saved: 25
+  link: https://www.secretescapes.com/dreamy-hong-kong-and-borneo-holiday-harbour-plaza-north-point-and-shangri-las-tanjung-aru-resort-and-spa/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
-  - title: TUVE Hong Kong
-    location: Hong Kong, China
-    description: A striking boutique hotel with rooms that could be straight out of a design journal
-    price: 86
-    price-description: per room per night
-    saved: 51
-    link: https://www.secretescapes.com/tuve-hong-kong-china/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
+- title: Captivating China tour & Hong Kong city break
+  image: captivating.jpg
+  location: Beijing, Xi’an, Shanghai & Hong Kong
+  description: See the Great Wall of China, Terracotta Warriors, Yu Yu Gardens and much more
+  price: 2349
+  price-description: per person for 10 nights
+  saved: 25
+  link: https://www.secretescapes.com/captivating-china-tour-and-hong-kong-city-break-beijing-xian-shanghai-and-honk-kong/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
-
-
-  - title: Dreamy Hong Kong & 5* pristine Borneo holiday
-    location: Harbour Plaza North Point & Shangri-La's Tanjung Aru Resort & Spa
-    description: Discover buzzing Hong Kong and five-star beach bliss in Borneo
-    price: 1789
-    price-description: per person for 10 nights
-    saved: 25
-    link: https://www.secretescapes.com/dreamy-hong-kong-and-borneo-holiday-harbour-plaza-north-point-and-shangri-las-tanjung-aru-resort-and-spa/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
-
-
-
-  - title: Dazzling Southeast Asia city & beach holiday with a Dubai stay
-    location: Hong Kong, Thailand & Dubai
-    description: Hong Kong to Bangkok, a Thai beach retreat and glitzy Dubai
-    price: 1649
-    price-description: per person for 14 nights
-    saved: 20
-    link: https://www.secretescapes.com/dazzling-southeast-asia-city-and-beach-holiday-with-a-dubai-stay-hong-kong-thailand-and-dubai/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
-
-
+- title: City-to-beach break through China & Indonesia
+  image: city-to.jpg
+  location: Hong Kong, Macau & Bali
+  description: An 11-night trip taking in cosmopolitan Hong Kong, flashy Macau and a Bali beach
+  price: 1589
+  price-description: per person for 11 nights
+  saved: 27
+  link: https://www.secretescapes.com/city-to-beach-break-through-china-and-indonesia-hong-kong-macau-and-bali/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
   # - title:
   #   location:
