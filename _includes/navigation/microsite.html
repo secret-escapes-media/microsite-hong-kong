@@ -2,7 +2,7 @@
 <div class="site-nav">
   <div class="row">
     <ul class="site-nav__list">
-      {% assign site-sections = site.html_pages | sort:"nav-order" %}{% for section in site-sections %}{% if section.nav-order %}<li class="site-nav__item site-nav__item--{{ section.title | slugify }}{% if section.class == page.class %} is-current{% endif %}"><a class="site-nav__link" href="{{ site.baseurl }}{{ section.url }}">{{section.title}}</a></li>{% endif %}{% endfor %}
+      {% assign site-sections = site.html_pages | sort:"nav-order" %}{% for section in site-sections %}{% if section.nav-order %}<li class="site-nav__item site-nav__item--{{ section.title | slugify }}{% if section.class == page.class %} is-current{% endif %}"><a class="site-nav__link" href="{{ site.baseurl }}{{ section.url }}">{{section.title}}</a></li>{% endif %}{% endfor %}<li class="site-nav__item site-nav__item--competition"><a class="site-nav__link" href="https://bestinhongkong.discoverhongkong.com/uk?utm_source=Secret%20Escapes&utm_medium=Competition%20Hub&utm_campaign=Hong%20Kong%202017" target="_blank">Competition</a></li>
     </ul>
   </div><!-- END - .row -->
 </div><!-- END - .site-nav -->
