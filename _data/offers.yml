@@ -4,7 +4,7 @@
   description: A striking boutique hotel with rooms that could be straight out of a design journal
   price: 86
   price-description: per room per night
-  saved: 51
+  saved: 47
   link: https://www.secretescapes.com/tuve-hong-kong-china/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
 - title: Captivating China tour & Hong Kong city break
@@ -25,10 +25,10 @@
   saved: 27
   link: https://www.secretescapes.com/city-to-beach-break-through-china-and-indonesia-hong-kong-macau-and-bali/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
 
-  # - title:
-  #   location:
-  #   description:
-  #   price:
-  #   price-description: per room per night
-  #   saved:
-  #   link:
+- title: iclub Fortress Hill Hotel
+  location: Hong Kong, China
+  description: A sleek, tech-savvy hotel amid Hong Kong's famous Fortress Hill and North Point districts
+  price: 69
+  price-description: per room per night
+  saved: 53
+  link: https://www.secretescapes.com/iclub-fortress-hill-hotel-hong-kong-china/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=HongKong_Oct2017
